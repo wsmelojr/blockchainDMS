@@ -467,15 +467,15 @@ Distributed measuring (DM) is a concept supported by previous works. Boccardo et
 
 \subsection{Blockchains}
 Blockchain is an emerging technology which has called attention of stakeholders in different industry segments. 
-Initially associated to crypto-currency markets due to Bitcoin popularity \cite{Zheng2017}, blockchain-based architectures have been proposed for a wide set of application areas including sensors networks, internet of things, smart cities, among others \cite{Zheng2017,Christidis2016,Vukolic2017a}. 
+Initially associated to crypto-currency markets due to Bitcoin popularity \cite{Zheng2017}, blockchain-based architectures have been proposed for a wide set of application areas including sensors networks, internet of things, smart cities, among others \cite{Zheng2017,Christidis2016}. 
 %become one of the most promising technologies for the next generation of Internet interaction systems, such as smart contracts, public services, Internet of Things (IoT), reputation systems and security services
 
 Conceptually, a blockchain can be regarded as a distributed append-only data structure (designated as \emph{ledger}) which is replicated and shared among a set of network peers \cite{Christidis2016}. 
 This structure consists of a sequence of blocks where block $n$ is cryptographically linked to the block $n-1$ using a hash function.
-Consequently, block $n$ can not be changed without also modifying all subsequent blocks $n + i, ..., n + k$ \cite{Sousa2017}. 
+Consequently, block $n$ can not be changed without also modifying all subsequent blocks $n + i, ..., n + k$ \cite{Sousa2018}. 
 Being a decentralized model, blockchains availability does not depend on third parties, which can greatly save costs \cite{Zheng2017}.
-In turn, integrity and availability are ensured by consensus among the peers, preventing the whole chain from being modified and requiring an agreement about any block to be appended to the ledger \cite{Sousa2017,Vukolic2016}.
-Blockchain platforms can be classified as \emph{permissionless}, when anybody can join to the network and participate in the network consensus, or \emph{permissioned}, when consensus is achieved by a set of known and identifiable peers \cite{Vukolic2016,Vukolic2017a}. Usually, permissioned blockchains consensus protocols expend less computational resources and can reach better transaction latency and throughput \cite{Sousa2017}.
+In turn, integrity and availability are ensured by consensus among the peers, preventing the whole chain from being modified and requiring an agreement about any block to be appended to the ledger \cite{Sousa2018,Vukolic2016}.
+Blockchain platforms can be classified as \emph{permissionless}, when anybody can join to the network and participate in the network consensus, or \emph{permissioned}, when consensus is achieved by a set of known and identifiable peers \cite{Vukolic2016}. Usually, permissioned blockchains consensus protocols expend less computational resources and can reach better transaction latency and throughput \cite{Sousa2018}.
 %REMOVIDO: One can say that blockchain enables trustless networks while using public key cryptographic for providing confidentiality and authenticity. 
 
 A blockchain can store virtually any digital asset, from data to self-executing scripts, usually defined as \emph{smart contracts}. %Ethereum \cite{Christidis2016} is probably the most well-known blockchain implementation supporting that. 
@@ -618,7 +618,7 @@ We conclude that while DM already reduces attackers capabilities, such reduction
 
 \section{Practical Experiment}
 
-\subsection{Implementing vehicle speed meters a distributed measuring system}
+\subsection{Implementing vehicle speed meters as a distributed measuring system}
 
 \begin{figure}[!t]
 \centering
@@ -629,7 +629,7 @@ We conclude that while DM already reduces attackers capabilities, such reduction
 
 We develop a practical experiment to demonstrate our proposal feasibility.
 It consists of a vehicle speed DMS using blockchains (Figure \ref{f:speedmeter}).
-Vehicle speed meters are efficient solutions for estimating the use of public roads, generating traffic statistics and enforcing speed limits for drivers.
+Vehicle speed meters are efficient solutions for estimating the use of public roads, generating traffic statistics and enforcing speed limits for drivers \cite{Ki2006,S2011}.
 The meter detects each vehicle, determine its speed and capture one or more pictures identifying the vehicle's license plate when necessary.
 The measurement and the license plate image constitute the legally relevant record, which is expected to be reliable and protected against frauds.
 
@@ -637,56 +637,74 @@ Vehicle speed meters are usually built as \emph{Type-U instruments}.
 WELMEC 7.2 \cite{EuropeanCooperationinLegalMetrologyWELMEC2015} defines this classification as instruments which run their software in a universal computer hardware.
 That happens because speed meters nowadays have an extensive list of requirements and aggregate a large number of NLR features.
 Consequently, their software usually is quite complex and hard for evaluating in type approval and V\&V.
-Besides, speed meters manufacturers complain about opening their complete solution for inspection, once such practice can put at risk some industrial secret.
+Besides, speed meters manufacturers complain about opening their complete solution for inspection, due to intellectual property legal issues.
 Another aspect is that MI owners usually deploy their speed meters in far places along roads spread in large geographic areas.
 That can difficult regular inspection activities and consequently increases costs associated with metrological surveillance.
 Thus all those aspects make speed meters strong candidates for solutions that help to separate LR and NLR software while offering easiness for legal metrology activities such as type approval, V\&V, and field surveillance.
 
 We implement such solution creating a blockchain network for distributed measuring.
-We glimpse the speed meter LR features condensed in a simple tamper proofing hardware that uses two inductive sensors for capture the vehicle's magnetic profile.
-After detecting a vehicle, this hardware uses a private key to sign the sensor data raw and sends that to a blockchain-based DMS.
+We collect the speed meter LR features condensed in a simple tamper proofing hardware that uses two inductive sensors for capture the vehicle's magnetic profile \cite{S2011}.
+After detecting a vehicle, this hardware uses a private key to sign the sensor raw data and sends that to a blockchain-based DMS.
 In turn, the blockchain executes the LR software as a smart contract and determines the vehicle speed.
 The vehicle detection event also triggers any other device used for providing complementary evidence (e.g., a camera that captures the vehicle license plate image).
 Furthermore, manufacturers may aggregate any other module necessary for implementing NLR functionalities or even use the blockchain to do that.
 Their decision does not affect the legal metrology activities once NLR features are not under regulation.
 
 \subsection{Architecture model using Hyperledger Fabric}
-Our experiment uses Hyperledger Fabric (HLF) \cite{Androulaki2018} for developing a permissioned blockchain where the peers cooperate to store measurements and execute LR software.
-HLF is a blockchain open source platform that includes two concepts which are very helpful for implementing our idea: endorsers and security policies.
+Our experiment uses Hyperledger Fabric \cite{Androulaki2018} for developing a permissioned blockchain where the peers cooperate to store measurements and execute LR software.
+Fabric is an open source blockchain platform that includes two concepts which are very helpful for implementing our idea: endorsers and security policies.
 
-Endorsers are peers which effectively execute smart contracts, which are called chaincodes in HLF.
+Endorsers are peers which effectively execute smart contracts, which are called chaincodes in Fabric.
 That has significant implications concerning intellectual property and performance.
 First, a manufacturer needs to reveal his LR software only for peers contracted to execute his measuring chaincode as a service, and to the notified body responsible for approving it.
 Second, a manufacturer can size his solution performance by providing how many endorser peers as necessary, resulting in a scalable architecture.
 In turn, security policies can set how the network validates the measurement provided by endorsers.
 
 In complement, security policies can work as a protection mechanism against collusion attacks and also implement metrological surveillance.
-Blockchain networks are constituted for peers that belong to different stakeholders or organizations.
+Blockchain networks are constituted by peers that belong to different stakeholders or organizations.
 Although they do not need to trust each other, each peer continually verifies other peers behavior.
 Security policies define rules for such monitoring.
-They can specify, for instance, which organizations must take part in a transaction endorsement.
+They can specify, for instance, which organizations must take part in a transaction endorsement (i.e., a measurement calculation).
 The more organizations are involved, the more expensive it becomes a collusion attack.
 Such monitoring activities are a sort of metrological surveillance since different organizations are continually checking the measurements resulting from chaincode execution.
 
 \subsection{Describing MI regulation and control activities}
-We set up our vehicle speed meter DMS as follows.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=.5\textwidth]{hlfscheme} %[width=2.5in]
+\caption{Vehicle speed DMS solution scheme}
+\label{f:scheme}
+\end{figure}
+
+We set up our vehicle speed DMS according to the scheme in Figure~\ref{f:scheme}.
 Inmetro and LaSIGE represent two independent organizations with distinct functions.
 Inmetro is a notified body responsible for regulating and controlling such instruments.
 LaSIGE provides computational resources for executing LR software from speed meters.
 
 The speed meter manufacturer implements LR software as a chaincode. 
-HLF supports chaincode written in Go programming language.
-Figure X shows a simple LR algorithm for calculating speed example in Go.
-This algorithm analyses the data raw from both sensors and finds the moment when the vehicle activates each sensor.
+Fabric supports chaincode written in Go programming language.
+%Figure X shows a simple LR algorithm for calculating speed example in Go.
+We create a chaincode that analyses raw data from both sensors and finds the moment when the vehicle activates each sensor.
 Once the samples are taken in regular periods, and we know the distance between the sensors, it becomes trivial to determine the vehicle speed.
+When the meter also enforces speed limits, one or more images from the vehicle's license plate can be necessary.
+Such requirement brings some concerns about privacy.
+Although the image part of the legally relevant information, it is not necessarily for determining the vehicle speed.
+So one can use different approaches to avoid problems with privacy.
+An idea consists in cyphering the images using asymmetric cryptography before sending them to the blockchain.
+One can do that using the public key of the legal authority responsible for issuing traffic tickets.
+A better alternative is to send only the image digital signature to the blockchain.
+The image is kept in a private data storage, and the blockchain can attest to its integrity and authenticity whenever necessary.
+Such an approach improves performance and practically eliminates privacy concerns.
+We consider this solution in our experiment.
 
-Our experiment supposes the implementation of legal metrology activities as follows.
+Our experiment assumes the implementation of legal metrology activities as follows.
 Firstly, the notified body proceeds with the MI type approval and V\&V.
-He does that by evaluating the MI device (i.e., inspecting sensors, cryptographic and communication features) and the LR source code (i.e., the HLF chaincode).
+He does that by evaluating the MI device (i.e., inspecting sensors, cryptographic and communication features) and the LR source code (i.e., the Fabric chaincode).
 After,  the notified body executes the applicable tests for assuring all MI LR functionalities.
 Once MI hardware and software are approved, the notified body is responsible for instantiating the chaincode in the blockchain.
 
-In HLF, a chaincode instantiation means to notify the endorsers that they may execute that chaincode.
+In Fabric, a chaincode instantiation includes the notification of endorsers that they may execute that chaincode.
 When the notified body does that, he inserts into the blockchain a new transaction comprised by the chaincode's fingerprint (i.e., the software image hash) and the respective security policies.
 Thus all the peers in the network know how to validate the chaincode execution by checking the applicable security policies.
 After instantiated, the chaincode fingerprint becomes immutable, following the intrinsic blockchain properties.
@@ -697,8 +715,8 @@ In practice, LaSIGE provides endorser peers.
 One must note that LaSIGE is only one possible organization that can offer such a service.
 Although we have only two organizations in our experiment, a real scenario can include several independent organizations.
 Each one of them could have endorser peers offering measuring services.
-Once the MI owner has available endorser peers, he needs to install the approved LR chaincode in each one of them.
-That enables any MI in the field to generate transactions, ask endorser peers for determining the vehicle speed,  and so store the vehicle speed legally relevant information in the blockchain ledger.
+Once the MI owner finds an available endorser peer, he needs to install the approved LR chaincode.
+That enables any MI in the field to generate transactions, ask endorsers to determine the vehicle speed, and so store the vehicle speed legally relevant information in the blockchain ledger.
 
 \subsection{Testing some attacks}
 
@@ -735,35 +753,39 @@ We try to estimate the blockchain peers best achievement without to consider net
 Essentially, we are interested in two main aspects:
 \begin{itemize}
    \item{The throughput and latency within each endorser peer. This subject is important because it helps to estimate how many peers a speed meter owner will need, considering a specific demand.}
-   \item{The throughput of a simple blockchain network configuration. We test a high number of transactions against a network consisting of only two peers (one of them as an endorser) and a (BFT???) consensus service.}
+   \item{The throughput of a simple blockchain network configuration. We test a high number of transactions against a network consisting of only two peers (one of them as an endorser) and a two different types of consensus service.}
 \end{itemize}
 
 Firstly, we estimate the experiment demand based on vehicles traffic real data.
 We choose the city of Sao Paulo in Brazil as a case study.
-Sao Paulo is a big city with a vehicular fleet above 8 million vehicles.
+Sao Paulo has a vehicular fleet with more than 8 million vehicles.
 According to a technical report from the Sao Paulo's Traffic Engineering Company 
 (CET-SP) \cite{CompanhiadeEngenhariadeTrafego-CET2017}, there was in 2016 something around one thousand speed meters spread along the city.
 The same report analyses the flux of vehicles on the main roads in the city and points out an average of 2,736 vehicles/hour (or 0.76 vehicles/sec) during the peak hours.
 Assuming such demand for a total of 1 thousand speed meters, we need a blockchain network able to process something around 800 tsp (transactions per second).
 
-Two works benchmark HLF performance in something around 2,000 and 3,000 tsp \cite{Sousa2017,Androulaki2018}.
+Two works benchmark Fabric performance in something around 2,000 and 3,000 tsp \cite{Androulaki2018}.
 However, both consider specific scenarios with proper customizations for evaluating particular performance issues.
 Our experiment does not employ any specific customization.
-We use HLF just as provided by its developers, using an ordinary hardware infrastructure available in any datacenter.
-That is purposeful to verify the real results that a speed meter solution owner can obtain by using HLF.
+We use Fabric just as provided by its developers, using an ordinary hardware infrastructure available in any datacenter.
+That is purposeful to verify the real results that a speed meter solution owner can obtain by using Fabric.
+Regarding the orderer service, we test two different scenarios.
+The first one is the native Fabric's solo orderer service, which is provided basically for testing and does not have a practical use.
+The second scenario uses the orderer service developed by Sousa et al. \cite{Sousa2018}, which tolerates Byzantine failures.
+We configure this service to work with four replicas.
 
 Our blockchain network environment consists of 3 nodes from a Dell PowerEdge R410 Cluster.
 Each node has two CPUs Intel® Xeon® Processor E5520 with 2.27 GHz and 32 GB of RAM.
-HLF standard distribution runs over \emph{docker containers} so that each physical node can host several peers.
+Fabric standard distribution runs over \emph{docker containers} so that each physical node can host several peers.
 For practical reasons, we use three nodes for allocating the orderer service, LaSIGE peers, and Inmetro peers respectively.
-The client transactions load is simulated using two nodes from a Dell PowerEdge PowerPowerCluster.
+The client transactions load is simulated using four nodes from a Dell PowerEdge R300, each one with a Intel Xeon Processor L5410 with 2.33 GHz and 8 GB of RAM.
 The simulation uses real data from speed meters developed by the company Perkons SA (www.perkons.com), which kindly granted a dataset for this experiment.
 
 The performance tests execute as follows.
-Each physical machines creates an HLF docker container client used for simulating transactions.
+Each physical machines creates an Fabric docker container client used for simulating transactions.
 At the test execution, the clients try to produce a load of $n$ concurrent transactions per second.
 They do that selecting a vector of bytes containing the sensors raw data from the dataset mentioned above, for each transaction.
-Clients use HLF protocol to invoke an LR chaincode and send such data as an argument to an endorser peer from LaSIGE organization.
+Clients use Fabric protocol to invoke an LR chaincode and send such data as an argument to an endorser peer from LaSIGE organization.
 The endorser peer shall return an endorsed package.
 The client uses such package for composing the complete transaction and sends it to the orderer service responsible for generating the ledger blocks and disseminate them to the other peers.
 The clients also keep records of timestamps and the elapsed time for completing the transaction.
@@ -773,16 +795,30 @@ Such information gives the throughput and latency estimates for the endorsement 
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=.45\textwidth]{graph1} %[width=2.5in]
-\caption{Throughput and latency resulting from different load levels.}
+\includegraphics[width=.45\textwidth]{chartsolo} %[width=2.5in]
+\caption{Throughput and latency using native Fabric solo orderer}
 \label{f:latth}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=.45\textwidth]{chartbft1r} %[width=2.5in]
+\caption{Throughput and latency using BFT orderer with one replica}
+\label{f:latthbft1}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=.45\textwidth]{chartbft4r} %[width=2.5in]
+\caption{Throughput and latency using BFT orderer with four replicas}
+\label{f:latthbft4}
 \end{figure}
 
 Figure \ref{f:latth} depicts our tests result.
 Throughput and latency reach a better trade-off around 300 tps and 1 second, respectively.
 The load necessary to get such results is around 600 concurrent transactions.
-In fact, there are some difficulties in effectively generating this number of concurrent transactions without to modify HLF implementation.
-Since we use HLF as an off-the-shelf solution, we simulate each transaction as an independent process, which requires massive hardware resources.
+In fact, there are some difficulties in effectively generating this number of concurrent transactions without modifying Fabric implementation.
+Since we use Fabric as an off-the-shelf solution, we simulate each transaction as an independent process, which requires massive hardware resources.
 Even so, the informed latency is precise once it comprises the receiving of all simulated transactions by the orderer service.
 One can observe that such result also points out a difficulty in dealing with the estimated peak demand of 800 tps.
 However, we understand that the blockchain can absorb that along the day since the number of transactions goes down after the peak hours.
@@ -791,9 +827,9 @@ However, we understand that the blockchain can absorb that along the day since t
 Although blockchains-based DMS is a promising approach, there are some challenges that need to be addressed for their use. The main ones as discussed as follow:
 %are related to the amount of data expected in some measurement applications, privacy concerns and authentication of external information providers.
 
-\textbf{$\bullet$ The measurement Big Data:} MI usually manipulate a high amount of data. In a large scale scenario (e.g., energy meters in a smart grid), MI can update their measurements faster, generating lots of transactions. A network connecting millions of meters may generate a transaction load unfeasible to be processed by existing blockchains implementations. Benchmark tests in Sousa et al. \cite{Sousa2017} indicate that the best available blockchain platforms are able to reach a peak around of 2000 transactions/second. Such performance is certainly not enough to meet the demand for measurements on a smart grid, for instance. As a possible solution, aggregated measurements can be used for reducing transactions in a blockchain implementation. Smarter MI can also be tried for determining transactions on demand. Another idea is to use \emph{transaction endorsers}, a concept introduced by HyperLedger Fabric \cite{Vukolic2017a,Sousa2017}. Endorsers can execute complex measuring computing, leaving only validation tasks for regular peers.
+\textbf{$\bullet$ The measurement Big Data:} MI usually manipulate a high amount of data. In a large scale scenario (e.g., energy meters in a smart grid), MI can update their measurements faster, generating lots of transactions. A network connecting millions of meters may generate a transaction load unfeasible to be processed by existing blockchains implementations. Benchmark tests in Sousa et al. \cite{Sousa2018} indicate that the best available blockchain platforms are able to reach a peak around of 2000 transactions/second. Such performance is certainly not enough to meet the demand for measurements on a smart grid, for instance. As a possible solution, aggregated measurements can be used for reducing transactions in a blockchain implementation. Smarter MI can also be tried for determining transactions on demand. Another idea is to use \emph{transaction endorsers}, a concept introduced by HyperLedger Fabric \cite{Sousa2018}. Endorsers can execute complex measuring computing, leaving only validation tasks for regular peers.
 
-\textbf{$\bullet$ Measuring and privacy:} Measurements assigned to a specific person allow to infer information about her habits and lifestyle. In a blockchain with public ledger, this problem becomes more serious. One needs to establish an acceptable trade-off between privacy and efficiency. Depending on the application scenario, privacy can require more sophisticated mechanisms for protecting or obfuscating identities, such as pseudonyms or identity protection layers. Permissioned blockchains can also constitute a suitable alternative once they contemplate an access control layer built into blockchain nodes \cite{Vukolic2017a,Vukolic2016}. Access policies can be constrained in such a manner that they satisfy privacy rules and restrictions.
+\textbf{$\bullet$ Measuring and privacy:} Measurements assigned to a specific person allow to infer information about her habits and lifestyle. In a blockchain with public ledger, this problem becomes more serious. One needs to establish an acceptable trade-off between privacy and efficiency. Depending on the application scenario, privacy can require more sophisticated mechanisms for protecting or obfuscating identities, such as pseudonyms or identity protection layers. Permissioned blockchains can also constitute a suitable alternative once they contemplate an access control layer built into blockchain nodes \cite{Vukolic2016}. Access policies can be constrained in such a manner that they satisfy privacy rules and restrictions.
 %Blockchains architectures also have evolved to support privacy requirements. Hyperledger 
 
 \textbf{$\bullet$ Communication issues:} Although we consider MI as connected devices, communication can be a problem in applications demanding real-time decisions. That is a restriction for any DMS over asynchronous networks. Thus blockchain-based measuring is not proper for all MI applications. Furthermore, attacks aiming communication (e.g., DDoS) represent an additional risk, although fully distributed systems as blockchains are more resilient to such attacks than conventional cloud architectures.
@@ -811,6 +847,7 @@ In this paper we discussed how blockchains can be used to support DMS. Due to th
 %This work was partially sponsored by XXXXX XXXX XXXXX XXXX XXXXX XXXX XXXXX XXXX, grant NNN.NNN/NN-N, by XX XXX XXXX through project XX XX XXX XX.
 This work was partially sponsored by the EU-BR SecureCloud project (MCTI/RNP 3rd Coordinated Call); and by the Coordination for the Improvement of Higher Education Personnel (CAPES), grant 99999.008512/2014-0, by FCT through project LaSIGE (UID/CEC/00408/2013).
 
+The authors also thank Perkons SA for kindly providing the speed meters dataset used in the experiments of this work.
 
 % \subsection{The measuring Big Data}
 % MI applied to massive measuring usually manipulate a big amount of data. For instance, consider a smart meter which basically integrates sensing data of voltage and electrical current sampled in high frequency to calculate energy power. In a high consume scenario, the meter updates its measurements each second, which means more than 80 thousand measurements/day. In a distributed measurement architecture using blockchains, the meter will generate a lot of transactions. When we consider a network integrating 50 million of smart meters, we have the \emph{measuring Big Data} problem and implementations using blockchains become unfeasible.
