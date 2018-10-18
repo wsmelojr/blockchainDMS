@@ -406,7 +406,7 @@ Curitiba, PR, Brazil\\
 % As a general rule, do not put math, special symbols or citations
 % in the abstract
 \begin{abstract}
-In the last years, measuring instruments have become quite complex due to the integration of embedded systems and software components and the increasing aggregation of new features. 
+In recent years, measuring instruments have become quite complex due to the integration of embedded systems and software components and the increasing aggregation of new features. 
 Consequently, metrological regulation and control require more efforts from notified bodies, becoming slower and more expensive. 
 In this work, we evaluate the use of blockchains as a resource to overcome such challenges.
 %how blockchains can help to overcome such challenges. 
@@ -433,7 +433,7 @@ Finally, we point out the main challenges related to such an approach, suggestin
 
 \section{Introduction}
 Measurement instruments (MI) are used in many application domains including industry, commerce, energy, transportation, health care and environment protection \cite{RodriguesFilho2015}. 
-Only in Europe, MI are responsible for an annual turnover of more than 500 billion Euros \cite{Esche2015}. 
+In Europe alone, MI are responsible for an annual turnover of more than 500 billion Euros \cite{Esche2015}. 
 In developing countries, the demand for MI has increased substantially due to the adoption of technologies and methods well established in developed countries \cite{RodriguesFilho2015}. 
 MI also can be seen as elementary building blocks for new technologies such as internet of things and cyber physical systems (e.g., smart grids) \cite{RodriguesFilho2015,Esche2015,Camara2012,Boccardo2014,Peters2015,Oppermann2016}. 
 
@@ -589,12 +589,18 @@ Due to their complexity, the activities also demand a highly qualified professio
 
 \subsection{Cloud-based Measuring System}
 \label{s:mi_cloud}
-When LR and NLR components are properly separated in independent modules, one could run these modules in different devices connected by well-defined interfaces. Such architecture leads to a DMS. For evaluating its properties, we take a cloud computing MI model inspired in \cite{Oppermann2016}. In this model, LR and NLR software are running as cloud services, outside of MI physical set (Figure~\ref{f:compare}-B). We assume MI communicates with the cloud services using a secure channel (e.g., TLS) and that side channel attacks are infeasible.
+When LR and NLR components are properly separated in independent modules, one could run these modules in different devices connected by well-defined interfaces.
+Such architecture leads to a DMS.
+For evaluating its properties, we take a cloud computing MI model inspired in \cite{Oppermann2016}.
+In this model, LR and NLR software are running as cloud services, outside of MI physical set (Figure~\ref{f:compare}-B).
+We assume MI communicates with the cloud services using a secure channel (e.g., TLS) and that side channel attacks are infeasible.
 
-When traditional and cloud models are compared, one can observe that the distributed architecture simplifies MI devices. MI practically do not include software components anymore once both LR and NLR software modules are running in the cloud. In practice, MI is now set up as a blend of sensors and AD converters.
+When traditional and cloud models are compared, one can observe that the distributed architecture simplifies MI devices.
+MI practically do not include software components anymore once both LR and NLR software modules are running in the cloud.
+In practice, MI is now set up as a blend of sensors and AD converters.
 A communication interface allows the MI to send sensing raw data to the cloud measuring system. 
 Basically, the MI could be designed only based on hardware components (e.g., smart sensors, cryptographic chips), although one should consider that some elementary software could be necessary.
-In any case, a significantly amount of software is moved from the MI to the cloud and works as a service. 
+In any case, a significantly amount of software is moved from the MI to the cloud and it works as a service. 
 Consequently, LR and NLR software can be scaled accordingly to the demand.
 
 %Despite of the challenges, we believe distributed measuring enables a trade-off among complexity and features in MI projects. In our conception, MI could adopt a minimalistic architecture, being composed only by sensors and analog-to-digital converters. All other features, including measurement computation, can be implemented in a distributed network. At the same time, legal metrology needs decentralized supervision capabilities once the resources dispose by notified bodies are scarce when compared with the number of deployed MI. We believe such goals can be achieved by distributed measuring systems using blockchains.
@@ -619,12 +625,14 @@ Consequently, LR and NLR software can be scaled accordingly to the demand.
 \label{s:mi_blockchain}
 Now we introduce the \emph{blockchain model} (Figure~\ref{f:compare}-C). 
 We consider that MI basically generate and store reliable measurements of physical quantities while managing the interests of different involved parties (e.g., consumption relations). 
-Thus, measurements can be seen as \emph{transactions} whose values must be protected against tampering and unintentional changes \cite{Esche2015}. Such aspects make DM a typical use case for blockchains applications. 
+Thus, measurements can be seen as \emph{transactions} whose values must be protected against tampering and unintentional changes \cite{Esche2015}.
+Such aspects make DM a typical use case for blockchains applications. 
 
 As a first and intuitive insight, we devise a distributed ledger storing reliable measurement transactions which can be checked by any involved party. 
 In addition, the blockchain also would support the execution of LR (and even NLR) software using smart contracts, which process information from sensors and generate a consolidated measurement value. 
-The integrity of measurements and LR software (as smart contracts) is preserved by blockchain implicit properties \cite{Zheng2017}. 
-The ledger accounting enables the management of cumulative consumption transactions, such as energy and gas metering. If a financial blockchain platform is used, it can integrate billing and payment functions. 
+The integrity of measurements and LR software (as smart contracts) is preserved by blockchain implicit properties \cite{Zheng2017}.
+The ledger accounting enables the management of cumulative consumption transactions, such as energy and gas metering.
+If a financial blockchain platform is used, it can integrate billing and payment functions. 
 That is an interesting additional resource when compared to the cloud model.
 
 We can glimpse a practical implementation of such DMS in the following example related to energy measuring. 
@@ -645,7 +653,8 @@ In the blockchain model, we devise measuring as \emph{a service offered by someo
 This is remarkably distinct to the traditional scenario where a vendor provides MI for measuring and is rewarded proportionally to the measurement. 
 This idea fits very well in the blockchain model. 
 Smart contracts can be used for computing measurements based on sensing information. 
-However they are coded by different parties that do not have conflicts of interests related to the measured quantity. Whatever the measurement result, these parties shall be rewarded by a preset value. 
+However they are coded by different parties that do not have conflicts of interests related to the measured quantity.
+Whatever the measurement result, these parties shall be rewarded by a preset value. 
 This motivates new players to provide better measuring algorithms.
 %once as faster they execute, more credits they can earn.
 Additionally, such strategy creates incentives for keeping the blockchain network since that becomes profitable. 
@@ -653,7 +662,10 @@ Additionally, such strategy creates incentives for keeping the blockchain networ
 This also breaks with the manner MI are traditionally used in consumer relations.
 Furthermore, it creates a new market for players who want to offer computing services for measuring. 
 
-The blockchain model also enables a set of complementary activities involving MI market and field surveillance that can be done by checking measurements inserted in the distributed ledger. Besides notified bodies, any entity representing society interests, consumers, goods providers, among others, can take part in additional supervision activities. We call that \emph{public surveillance}. Such efforts can include smart contracts for generating redundant measurements for counter-proofing, or statistical analyses against the ledger looking for fraud evidence or patterns, for instance.
+The blockchain model also enables a set of complementary activities involving MI market and field surveillance that can be done by checking measurements inserted in the distributed ledger.
+Besides notified bodies, any entity representing society interests, consumers, goods providers, among others, can take part in additional supervision activities.
+We call that \emph{public surveillance}.
+Such efforts can include smart contracts for generating redundant measurements for counter-proofing, or statistical analyses against the ledger looking for fraud evidence or patterns, for instance.
 
 %at Section \ref{s:sec_analysis}.
 
@@ -683,7 +695,11 @@ We demonstrate how BMAF requirements and activities are impacted when applied on
 Table \ref{t:sec_analysis} depicts such analysis.
 %The security analysis is summarized at.
 
-Initially we evaluate the traditional MI security. In this scenario, one should note that BMAF requirements and activities are  necessary to prevent attacks. As already discussed at Section \ref{s:mi_traditional}, the efforts required for proceeding with traditional MI control and supervision activities are distinguished. Type approval and software validation and verification need to comprise all components and software modules. In turn, supervision also requires experienced surveillance technicians to implement inspection and software integrity checks.
+Initially we evaluate the traditional MI security. 
+In this scenario, one should note that BMAF requirements and activities are necessary to prevent attacks.
+As already discussed at Section \ref{s:mi_traditional}, the efforts required for proceeding with traditional MI control and supervision activities are distinguished.
+Type approval and software validation and verification need to comprise all components and software modules.
+In turn, supervision also requires experienced surveillance technicians to implement inspection and software integrity checks.
 
 When the cloud model is analyzed, one can notice that MI become simpler because LR and NLR software are now running in the cloud. 
 Additionally, such situation reduces capabilities of a typical attacker (e.g., consumers do not have physical access to MI software interfaces anymore).
