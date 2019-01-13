@@ -1,4 +1,7 @@
 %% bare_jrnl.tex
+%DIF LATEXDIFF DIFFERENCE FILE
+%DIF DEL tim-b4.tex   Fri Jan 11 22:59:32 2019
+%DIF ADD tim.tex      Sat Jan 12 19:07:28 2019
 %% V1.4b
 %% 2015/08/26
 %% by Michael Shell
@@ -306,7 +309,66 @@
 
 % correct bad hyphenation here
 \hyphenation{op-tical net-works semi-conduc-tor}
-
+%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
+%DIF UNDERLINE PREAMBLE %DIF PREAMBLE
+\RequirePackage[normalem]{ulem} %DIF PREAMBLE
+\RequirePackage{color}\definecolor{RED}{rgb}{1,0,0}\definecolor{BLUE}{rgb}{0,0,1} %DIF PREAMBLE
+\providecommand{\DIFadd}[1]{{\protect\color{blue}\uwave{#1}}} %DIF PREAMBLE
+\providecommand{\DIFdel}[1]{{\protect\color{red}\sout{#1}}}                      %DIF PREAMBLE
+%DIF SAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddbegin}{} %DIF PREAMBLE
+\providecommand{\DIFaddend}{} %DIF PREAMBLE
+\providecommand{\DIFdelbegin}{} %DIF PREAMBLE
+\providecommand{\DIFdelend}{} %DIF PREAMBLE
+%DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
+\providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
+\providecommand{\DIFaddbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFaddendFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelendFL}{} %DIF PREAMBLE
+\newcommand{\DIFscaledelfig}{0.5}
+%DIF HIGHLIGHTGRAPHICS PREAMBLE %DIF PREAMBLE
+\RequirePackage{settobox} %DIF PREAMBLE
+\RequirePackage{letltxmacro} %DIF PREAMBLE
+\newsavebox{\DIFdelgraphicsbox} %DIF PREAMBLE
+\newlength{\DIFdelgraphicswidth} %DIF PREAMBLE
+\newlength{\DIFdelgraphicsheight} %DIF PREAMBLE
+% store original definition of \includegraphics %DIF PREAMBLE
+\LetLtxMacro{\DIFOincludegraphics}{\includegraphics} %DIF PREAMBLE
+\newcommand{\DIFaddincludegraphics}[2][]{{\color{blue}\fbox{\DIFOincludegraphics[#1]{#2}}}} %DIF PREAMBLE
+\newcommand{\DIFdelincludegraphics}[2][]{% %DIF PREAMBLE
+\sbox{\DIFdelgraphicsbox}{\DIFOincludegraphics[#1]{#2}}% %DIF PREAMBLE
+\settoboxwidth{\DIFdelgraphicswidth}{\DIFdelgraphicsbox} %DIF PREAMBLE
+\settoboxtotalheight{\DIFdelgraphicsheight}{\DIFdelgraphicsbox} %DIF PREAMBLE
+\scalebox{\DIFscaledelfig}{% %DIF PREAMBLE
+\parbox[b]{\DIFdelgraphicswidth}{\usebox{\DIFdelgraphicsbox}\\[-\baselineskip] \rule{\DIFdelgraphicswidth}{0em}}\llap{\resizebox{\DIFdelgraphicswidth}{\DIFdelgraphicsheight}{% %DIF PREAMBLE
+\setlength{\unitlength}{\DIFdelgraphicswidth}% %DIF PREAMBLE
+\begin{picture}(1,1)% %DIF PREAMBLE
+\thicklines\linethickness{2pt} %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,0){\framebox(1,1){}}}% %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,0){\line( 1,1){1}}}% %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,1){\line(1,-1){1}}}% %DIF PREAMBLE
+\end{picture}% %DIF PREAMBLE
+}\hspace*{3pt}}} %DIF PREAMBLE
+} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddbegin}{\DIFaddbegin} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddend}{\DIFaddend} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelbegin}{\DIFdelbegin} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelend}{\DIFdelend} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddbegin}{\DIFOaddbegin \let\includegraphics\DIFaddincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddend}{\DIFOaddend \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelbegin}{\DIFOdelbegin \let\includegraphics\DIFdelincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelend}{\DIFOaddend \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddbeginFL}{\DIFaddbeginFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddendFL}{\DIFaddendFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelbeginFL}{\DIFdelbeginFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelendFL}{\DIFdelendFL} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddbeginFL}{\DIFOaddbeginFL \let\includegraphics\DIFaddincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelbeginFL}{\DIFOdelbeginFL \let\includegraphics\DIFdelincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
 
 \begin{document}
 
@@ -355,8 +417,9 @@ Curitiba, PR, Brazil\\
         Alysson~Bessani, %~\IEEEmembership{Fellow,~OSA,}
         Nuno~Neves, %~\IEEEmembership{Life~Fellow,~IEEE}% <-this % stops a space
         Altair~Santin
-        and Luiz~F.~R.~C.~Carmo
-\thanks{W. Melo Jr. and Luiz F. R. C. Carmo are with the National Institute of Metrology, Quality and Technology, Duque de Caxias, RJ, Brazil; and with the Federal University of Rio de Janeiro, Brazil.}% <-this % stops a space
+        and Luiz~F.\DIFaddbegin \DIFadd{~}\DIFaddend R.\DIFaddbegin \DIFadd{~}\DIFaddend C.~Carmo
+\DIFdelbegin %DIFDELCMD < \thanks{W. Melo Jr. and L.F.R.C. Carmo are with the National Institute of Metrology, Quality and Technology, Duque de Caxias, RJ, Brazil; and with the Federal University of Rio de Janeiro, Brazil.}%%%
+\DIFdelend \DIFaddbegin \thanks{W. Melo Jr. and Luiz F. R. C. Carmo are with the National Institute of Metrology, Quality and Technology, Duque de Caxias, RJ, Brazil; and with the Federal University of Rio de Janeiro, Brazil.}\DIFaddend % <-this % stops a space
 \thanks{A. Bessani and N. Neves are with LaSIGE, Faculdade de Ci\^encias, Universidade de Lisboa, Portugal.}% <-this % stops a space
 \thanks{A. Santin is with Pontifical Catholic University of Parana, Curitiba, PR, Brazil.}% <-this % stops a space
 %\thanks{Manuscript received July 28, 2018; revised Xxxx NN, NNNN.}
@@ -390,8 +453,10 @@ Curitiba, PR, Brazil\\
 
 % The paper headers
 %\markboth{IEEE Transactions on Instrumentation and Measurements, Special Issue I2MTC, July~2018}
-\markboth{Using Blockchains to Implement Distributed Measuring Systems}{}
-%{Melo Jr. \MakeLowercase{\textit{et al.}}: How Blockchains can improve Measuring Instruments Regulation and Control (extended version)}
+\DIFdelbegin %DIFDELCMD < \markboth{How Blockchains can improve Measuring Instruments Regulation and Control (extended version)}{}
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \markboth{Using Blockchains to Implement Distributed Measuring Systems}{}
+\DIFaddend %{Melo Jr. \MakeLowercase{\textit{et al.}}: How Blockchains can improve Measuring Instruments Regulation and Control (extended version)}
 % The only time the second header will appear is for the odd numbered pages
 % after the title page when using the twoside option.
 % 
@@ -413,10 +478,10 @@ In this work, we evaluate the use of blockchains as a resource to overcome such 
 %how blockchains can help to overcome such challenges. 
 We start with a conceptual model for implementing measuring instruments in a distributed blockchain-based architecture, and compare it with traditional measuring instruments and distributed measuring models discussed in previous works. 
 We also made a security analysis, demonstrating that blockchains-based measuring systems can impact the way measuring instruments are used in consumer relations while improving security and simplifying metrological regulation and control.
-We implement a vehicle speed measuring system using the Hyperledger Fabric blockchain platform.
+\DIFdelbegin \DIFdel{In the sequence, we }\DIFdelend \DIFaddbegin \DIFadd{We }\DIFaddend implement a vehicle speed measuring system using the Hyperledger Fabric blockchain platform.
 We evaluate the security and performance of our blockchain-based measuring system by executing tests with data from real speed meter sensors.
 The results are promising and validate the feasibility of our idea.
-Finally, we point out the main challenges related to our approach, suggesting alternatives and potential issues to be addressed by future works.
+Finally, we point out the main challenges related to \DIFdelbegin \DIFdel{such an }\DIFdelend \DIFaddbegin \DIFadd{our }\DIFaddend approach, suggesting alternatives and potential issues \DIFdelbegin \DIFdel{for }\DIFdelend \DIFaddbegin \DIFadd{to be addressed by }\DIFaddend future works.
 \end{abstract}
 
 % no keywords
@@ -436,34 +501,34 @@ Finally, we point out the main challenges related to our approach, suggesting al
 Measurement instruments (MI) are used in many application domains including industry, commerce, energy, transportation, health care and environment protection \cite{RodriguesFilho2015}. 
 In Europe alone, MI are responsible for an annual turnover of more than 500 billion Euros \cite{Esche2015}. 
 In developing countries, the demand for MI has increased substantially due to the adoption of technologies and methods well established in developed countries \cite{RodriguesFilho2015}. 
-MI also can be seen as fundamental building blocks for new technologies such as internet of things and cyber physical systems (e.g., smart grids) \cite{RodriguesFilho2015,Esche2015,Camara2012,Boccardo2014,Peters2015,Oppermann2018}. 
+MI also can be seen as \DIFdelbegin \DIFdel{elementary }\DIFdelend \DIFaddbegin \DIFadd{fundamental }\DIFaddend building blocks for new technologies such as internet of things and cyber physical systems (e.g., smart grids) \cite{RodriguesFilho2015,Esche2015,Camara2012,Boccardo2014,Peters2015,Oppermann2018}. 
 
 MI are nowadays quite complex, since they are strongly based on embedded systems and are often connected and accessible by the Internet \cite{Esche2015,Camara2012}. 
 %That creates
-This kind of scenario might expose MI to security gaps that can be explored with malicious intent \cite{Boccardo2014,Peters2015}.
+This kind of scenario might expose MI to security gaps \DIFdelbegin \DIFdel{which }\DIFdelend \DIFaddbegin \DIFadd{that }\DIFaddend can be explored with malicious intent \cite{Boccardo2014,Peters2015}.
 Legal metrology is responsible for promoting MI metrological assurance, establishing security requirements and technical activities such as type approval, verification and metrological supervision \cite{RodriguesFilho2015}.
 However, the increasing complexity of MI affects such activities substantially. 
-Type approval requires more effort while verification can involve use cases which are hard to reproduce inside labs. 
-In turn, metrological supervision becomes difficult due to the diversity of MI models, their geographic spread and the limited resources owned by regulatory agencies.
+Type approval requires more \DIFdelbegin \DIFdel{efforts }\DIFdelend \DIFaddbegin \DIFadd{effort }\DIFaddend while verification can involve use cases which are hard to reproduce inside labs. 
+In turn, metrological supervision becomes difficult due to the diversity of MI models, their \DIFdelbegin \DIFdel{geographically spread over deployment }\DIFdelend \DIFaddbegin \DIFadd{geographic spread }\DIFaddend and the limited resources owned by regulatory agencies.
 
 We work with the hypothesis that the aforementioned difficulties should be overcome with alternative approaches that simplify MI design while employing strategies to decentralize metrological supervision. 
 Such idea finds many aspects in common with a new trendy technology: \emph{blockchains} \cite{Nakamoto2008}. 
-A blockchain can be described as a distributed data structure which assures information integrity and authenticity while providing a platform for executing self-enforced software procedures, called \emph{smart contracts} \cite{Christidis2016}. Blockchain solutions have been very successful in financial applications (e.g., Bitcoin and Ethereum), inspiring its use in different applications and knowledge areas \cite{Nakamoto2008,Christidis2016}.
-More recently, a few works have proposed blockchain applications in legal metrology, which include decentralized audit, mechanisms for software loading, Public Key infrastructure (PKI) for MI manufacturers and Distributed Measuring Systems (DMS) \cite{Peters2018,MeloJr.2018a}.
+A blockchain can be described as a distributed data structure which assures information integrity and authenticity while providing a platform for executing \DIFdelbegin \DIFdel{self-enforce }\DIFdelend \DIFaddbegin \DIFadd{self-enforced }\DIFaddend software procedures, called \emph{smart contracts} \cite{Christidis2016}. Blockchain solutions have been very successful in financial applications (e.g., Bitcoin and Ethereum), \DIFdelbegin \DIFdel{which motivates innovative ideas using blockchains }\DIFdelend \DIFaddbegin \DIFadd{inspiring its use }\DIFaddend in different applications and knowledge areas \cite{Nakamoto2008,Christidis2016}.
+More recently, a few works have proposed blockchain applications in legal metrology, which include decentralized audit, mechanisms for software loading, \DIFdelbegin \DIFdel{PKI }\DIFdelend \DIFaddbegin \DIFadd{Public Key infrastructure (PKI) }\DIFaddend for MI manufacturers and Distributed Measuring Systems (DMS) \cite{Peters2018,MeloJr.2018a}.
 
 In this paper we discuss how blockchains can improve measuring applications, evaluating two main aspects: \emph{distributed measuring} (DM) and \emph{decentralized surveillance}.
 This paper extends the ideas presented in our previous work \cite{MeloJr.2018a}.
 %under the title ``How Blockchains can improve Measuring Instruments Regulation and Control''
 We start from preliminary concepts already consolidated in Legal Metrology about MI regulation and control. 
-Then we explore ideas related to the integration of MI in DMS, proposing a blockchain-based model.
-Such aspects result in an innovative concept that dissociates the measurement service from the measurement quantity while it improves MI security and makes metrological assurance simpler and less expensive. 
+Then we explore ideas related to the integration of MI in \DIFdelbegin \DIFdel{Distributed Measuring Systems (DMS)}\DIFdelend \DIFaddbegin \DIFadd{DMS}\DIFaddend , proposing a blockchain-based model.
+Such aspects result in an innovative concept that dissociates the measurement service from the measurement quantity while \DIFaddbegin \DIFadd{it }\DIFaddend improves MI security and makes metrological assurance simpler and less expensive. 
 
 %Furthermore, this model impacts significantly attacks against MI since it restricts attackers capabilities.
 
 Our main contributions can be summarized as follows:
 \begin{itemize}
  \item We introduce the idea of DM using blockchains and describe its advantages when compared to traditional MI and other DM models. To the best of our knowledge, this is the first paper to describe a blockchains-based DMS.
- \item We propose an architectural model for implementing our idea, showing that MI and blockchains enable a new business model where the measuring process is an independent service, reducing conflicts of interest.
+ \item We propose an architectural model for implementing our idea, showing that MI and blockchains enable a new business model where the measuring process is an independent service, \DIFdelbegin \DIFdel{which reduces conflict of interests}\DIFdelend \DIFaddbegin \DIFadd{reducing conflicts of interest}\DIFaddend .
  \item We present a security analysis, showing that our model improves MI security since it constrains the attacker capabilities, thus simplifying MI regulation and control.
  \item We develop a practical case study using the Hyperledger Fabric \cite{Androulaki2018} platform. We create a blockchain network that implements legally relevant software using smart contracts for measuring vehicle speed. We also present results that demonstrate the feasibility of our idea.
  \item We point out challenges that shall be addressed in future works using blockchains in measuring applications.
@@ -481,40 +546,51 @@ Our main contributions can be summarized as follows:
 \section{Background}
 \subsection{Legal metrology and MI reliability}
 \label{s:mi_realiability}
-Legal metrology embraces MI regulation and control. It is crucial to assure the correctness of measurements \cite{RodriguesFilho2015} and regulate consumer relations \cite{Oppermann2018}.
+Legal metrology embraces MI regulation and control. It is crucial to assure the \DIFdelbegin \DIFdel{measurements correctness }\DIFdelend \DIFaddbegin \DIFadd{correctness of measurements }\DIFaddend \cite{RodriguesFilho2015} and regulate consumer relations \cite{Oppermann2018}.
 %, having a significant impact over countries competitiveness \cite{RodriguesFilho2015}. Legal metrology protects the economic system and regulates consumer relations, while enhancing MI public reliability \cite{Oppermann2018}.
 Usually, legal metrology regulations are defined by government agencies or international committees. 
 Regulation directives traditionally establish a set of requirements and activities \cite{RodriguesFilho2015}.
-The main ones are related to legal control of MI and type approval, which can include documentation and code inspection, validation and verification; and metrological supervision, including quality, market and field surveillance.
+The main ones are related to legal control \DIFaddbegin \DIFadd{of }\DIFaddend MI and type approval, which can include documentation and code inspection, validation and verification; and metrological supervision, including quality, market and field surveillance.
 %Activities are classified in two levels. The first one is related to legal control MI type approval, which can include documentation and code inspection, validation and verification. The second level activities covers metrological supervision, including quality, market and field surveillance. 
 These activities are usually executed by notified bodies\footnote{Notified bodies are public or private parties organized for verifying MI.} that are designated to assert MI conformity \cite{Esche2015,Oppermann2018}. 
 %In some cases, manufacturers are authorized to declare their MI conformity \cite{RodriguesFilho2015} although such practice is not recommended mainly in developing countries where malicious manufacturers can further measurement frauds \cite{Camara2012,Boccardo2014}. In practice, regulation directives should be formated considering risk scenarios and attacks related to the use of different MI in different places.
 
 Legal metrology activities related to electronic and software controlled MI can demand more complex procedures and specialized knowledge.
 Usually, regulation adopts security requirements and good practices from well-known technical standards \cite{Esche2015,Peters2015,Luchsinger2008}. 
-The \emph{OIML D 31(E)} document \cite{InternationalOrganizationofLegalMetrologyOIML2008} and \emph{WELMEC Software Guide 7.2} \cite{EuropeanCooperationinLegalMetrologyWELMEC2015} are probably the more widespread standards for software-controlled MI design, deployment and inspection.
+The \emph{OIML \DIFdelbegin \footnote{\DIFdel{OIML is the International Organization of Legal Metrology.}} %DIFAUXCMD
+\addtocounter{footnote}{-1}%DIFAUXCMD
+\DIFdelend D 31(E)} document \cite{InternationalOrganizationofLegalMetrologyOIML2008} and \emph{WELMEC \DIFdelbegin \footnote{\DIFdel{WELMEC is the European committee to promote cooperation in the field of legal metrology.}} %DIFAUXCMD
+\addtocounter{footnote}{-1}%DIFAUXCMD
+\DIFdelend Software Guide 7.2} \cite{EuropeanCooperationinLegalMetrologyWELMEC2015} are probably the more widespread standards for \DIFdelbegin \DIFdel{software controlled }\DIFdelend \DIFaddbegin \DIFadd{software-controlled }\DIFaddend MI design, deployment and inspection.
 %Both documents are taken as reference by metrological agencies, notified bodies and manufacturers in different countries \cite{Camara2012,Peters2015}.
 %Attacks against MI can look after different goals.
-%\footnote{OIML is the International Organization of Legal Metrology.} 
-%\footnote{WELMEC is the European committee to promote cooperation in the field of legal metrology.}
+%DIF > \footnote{OIML is the International Organization of Legal Metrology.} 
+%DIF > \footnote{WELMEC is the European committee to promote cooperation in the field of legal metrology.}
+\DIFaddbegin 
 
-The majority of security issues with MI arise from parties seeking undue economic advantages.
-%are associated to economic undue advantages.
-%taken by attackers, which are interested in the measured physical quantity value.
+\DIFaddend The majority of security issues with MI \DIFdelbegin \DIFdel{are associated to economic undue advantages.
+}\DIFdelend \DIFaddbegin \DIFadd{arise from parties seeking undue economic advantages.
+%DIF > are associated to economic undue advantages.
+}\DIFaddend %taken by attackers, which are interested in the measured physical quantity value.
 A classical example occurs in the commerce of measured goods where vendors and consumers have conflicting interests \cite{RodriguesFilho2015}.
 Malicious vendors can try to maximize profits while malicious consumers can try to minimize prices by frauding measurements.
-Measurement frauds against MI (such as scales, energy meters and fuel pumps) are very common in developing countries \cite{Camara2012,Luchsinger2008}.
+Measurement frauds against MI (such as scales, energy meters and fuel pumps) are very common in developing countries \DIFdelbegin \DIFdel{\mbox{%DIFAUXCMD
+\cite{Luchsinger2008,Camara2012}}\hspace{0pt}%DIFAUXCMD
+}\DIFdelend \DIFaddbegin \DIFadd{\mbox{%DIFAUXCMD
+\cite{Camara2012,Luchsinger2008}}\hspace{0pt}%DIFAUXCMD
+}\DIFaddend .
 Attacks can also intend to steal sensitive information and intellectual property \cite{Camara2012,Oppermann2018}.
-In some cases they even threaten people's physical integrity (e.g., tampering measurements related to medical procedures) \cite{Boccardo2014}.
+In some cases they even \DIFdelbegin \DIFdel{threat people}\DIFdelend \DIFaddbegin \DIFadd{threaten people's }\DIFaddend physical integrity (e.g., tampering measurements related to medical procedures) \cite{Boccardo2014}.
 
 \subsection{Distributed measuring}
-Distributed measuring (DM), where components are connected through a network, is well studied.
-%concept supported by previous works and correlated ideas.
-Boccardo et al. \cite{Boccardo2014} describes a strategy to simplify MI type approval and supervision activities related to medical MI.
+Distributed measuring (DM)\DIFdelbegin \DIFdel{is a concept supported by previous works and correlated ideas.
+}\DIFdelend \DIFaddbegin \DIFadd{, where components are connected through a network, is well studied.
+%DIF > concept supported by previous works and correlated ideas.
+}\DIFaddend Boccardo et al. \cite{Boccardo2014} describes a strategy to simplify MI type approval and supervision activities related to medical MI.
 Their proposal consists in signing sensing raw data of a sphygmomanometer immediately after analog-to-digital (AD) conversion.
-Although it is not a DM case, this approach suggests that part of the measurement computing can be done externally to the sphygmomanometer hardware core due to the use of a digital signature to check sensing data integrity and authenticity.
-Peters et al. \cite{Peters2015} describes a MI security framework using virtual machines to separate \emph{legally relevant} (LR) and \emph{non-legally relevant} (NLR) software.\footnote{OIML D 31(E) and WELMEC 7.2 use LR to designate any component which can affect measuring final results, while NLR cannot do that.} The authors propose different virtual machines to execute LR and NLR functions and define secure interfaces for communicating among them. This approach is presented as an alternative to improve security and reduce MI complexity. Additionally, it enables virtualization using different hardware cores and consequently allows the implementation of \emph{Distributed Measuring Systems} (DMS). Lastly, a DM architecture using cloud computing is discussed by Oppermann et al. \cite{Oppermann2018}. The authors present advantages related to IT infrastructure cost-savings and the possibility of MI manufacturers to offer modern interconnected devices and features.
-They also present a comprehensive example of how to integrate energy meters in a DMS. 
+Although it is not a DM case, \DIFdelbegin \DIFdel{such }\DIFdelend \DIFaddbegin \DIFadd{this }\DIFaddend approach suggests that part of the measurement computing can be done externally to the sphygmomanometer hardware core due to the use of a digital signature to check sensing data integrity and authenticity.
+\DIFdelbegin \DIFdel{In turn, }\DIFdelend Peters et al. \cite{Peters2015} describes a MI security framework using virtual machines to \DIFdelbegin \DIFdel{get separation among }\DIFdelend \DIFaddbegin \DIFadd{separate }\DIFaddend \emph{legally relevant} (LR) and \emph{non-legally relevant} (NLR) software.\footnote{OIML D 31(E) and WELMEC 7.2 use LR to designate any component which can affect measuring final results, while NLR cannot do that.} The authors propose different virtual machines to execute LR and NLR functions and define secure interfaces for communicating among them. This approach is presented as an alternative to improve security and reduce MI complexity. Additionally, it enables virtualization using different hardware cores and consequently allows the implementation of \emph{Distributed Measuring Systems} (DMS). Lastly, a DM architecture using cloud computing is discussed by Oppermann et al. \cite{Oppermann2018}. The authors present advantages related to IT infrastructure cost-savings and the possibility of MI manufacturers to offer modern interconnected devices and features.
+They also present a comprehensive example of how \DIFdelbegin \DIFdel{integrates }\DIFdelend \DIFaddbegin \DIFadd{to integrate }\DIFaddend energy meters in a DMS. 
 In contrast, they also point out issues related to communication security, data management, and reliability. Roughly speaking, they assert that the following challenges need to be addressed:
 \begin{itemize}
  \item DM instruments must be as secure as their classical counterparts.
@@ -523,8 +599,8 @@ In contrast, they also point out issues related to communication security, data 
 \end{itemize}
 
 \subsection{Blockchains}
-Blockchain is an emerging technology which has caught the attention of stakeholders in different industry segments. 
-Initially associated with crypto-currency markets due to Bitcoin popularity \cite{Nakamoto2008}, blockchain-based architectures have been proposed for a wide set of application areas, including sensor networks, internet of things, smart cities, among others \cite{Christidis2016}. 
+Blockchain is an emerging technology which has \DIFdelbegin \DIFdel{called }\DIFdelend \DIFaddbegin \DIFadd{caught }\DIFaddend the attention of stakeholders in different industry segments. 
+Initially associated with crypto-currency markets due to Bitcoin popularity \cite{Nakamoto2008}, blockchain-based architectures have been proposed for a wide set of application areas\DIFaddbegin \DIFadd{, }\DIFaddend including sensor networks, internet of things, smart cities, among others \cite{Christidis2016}. 
 %become one of the most promising technologies for the next generation of Internet interaction systems, such as smart contracts, public services, Internet of Things (IoT), reputation systems and security services
 
 Conceptually, a blockchain can be regarded as a distributed append-only data structure (designated as \emph{ledger}) which is replicated and shared among a set of network peers \cite{Christidis2016}. 
@@ -533,28 +609,28 @@ Consequently, block $n$ cannot be changed without also modifying all subsequent 
 Being a decentralized model, blockchains availability does not depend on third parties, which can greatly save costs.
 %\cite{Zheng2017}.
 In turn, integrity and availability are ensured by consensus among the peers, preventing the whole chain from being modified and requiring an agreement about any block to be appended to the ledger \cite{Sousa2018,Vukolic2016}.
-Blockchain platforms can be classified as \emph{permissionless}, in which anybody can join and participate in the network consensus, or \emph{permissioned}, in which consensus is achieved by a set of known and identifiable peers \cite{Vukolic2016}. Usually, permissioned blockchains consensus protocols expend less computational resources and can reach better transaction latency and throughput.
+Blockchain platforms can be classified as \emph{permissionless}, \DIFdelbegin \DIFdel{when }\DIFdelend \DIFaddbegin \DIFadd{in which }\DIFaddend anybody can join and participate in the network consensus, or \emph{permissioned}, \DIFdelbegin \DIFdel{when }\DIFdelend \DIFaddbegin \DIFadd{in which }\DIFaddend consensus is achieved by a set of known and identifiable peers \cite{Vukolic2016}. Usually, permissioned blockchains consensus protocols expend less computational resources and can reach better transaction latency and throughput.
 %\cite{Sousa2018}.
 %REMOVIDO: One can say that blockchain enables trustless networks while using public key cryptographic for providing confidentiality and authenticity. 
 
 A blockchain can store virtually any digital asset, from data to self-executing scripts, usually defined as \emph{smart contracts}. %Ethereum \cite{Christidis2016} is probably the most well-known blockchain implementation supporting that. 
-This makes blockchains not only a data storage solution but also a complete distributed platform for proper and distributed automated workflow \cite{Christidis2016}.
+This makes \DIFdelbegin \DIFdel{blockchain }\DIFdelend \DIFaddbegin \DIFadd{blockchains }\DIFaddend not only a data storage solution but also a complete distributed platform for proper and distributed automated workflow \cite{Christidis2016}.
 Once smart contracts are executed at every network peer in an independent and automatic manner, software integrity is achieved from blockchains integrity as a whole. 
 %Such property has a remarkable impact over applications that require software identification and integrity checking.
 
 \section{Defining MI Security Scope}
-In this work, we want to evaluate the security level of different measuring systems models and point out the advantages and drawbacks of these models. 
-We are especially interested in MI reliability and the required effort for providing MI metrological assurance.
+In this work, we want to evaluate the security level of different measuring systems models and \DIFdelbegin \DIFdel{so }\DIFdelend point out the advantages and drawbacks of \DIFdelbegin \DIFdel{each model}\DIFdelend \DIFaddbegin \DIFadd{these models}\DIFaddend . 
+We are especially interested in MI reliability and the required \DIFdelbegin \DIFdel{efforts }\DIFdelend \DIFaddbegin \DIFadd{effort }\DIFaddend for providing MI metrological assurance.
 Metrological requirements and activities are very particular for different MI classes. 
-However, a simple set of requirements and activities are representative of most software-controlled MI concerning security properties. 
+However, a simple set of requirements and activities are representative \DIFdelbegin \DIFdel{to a most of }\DIFdelend \DIFaddbegin \DIFadd{of most }\DIFaddend software-controlled MI concerning security properties. 
 From that point of view, we define our MI security scope based on a generic attack model and its respective metrological assurance framework. 
 We described both in this section.
 %Both consist of a minimal set of requirements and activities necessary for providing MI realiability.
 
 \subsection{Attack model}
 \label{s:attackmodel}
-We consider a simple attack model that can be built from MI use cases, according to OIML D 31(E) and WELMEC 7.2 guides. MI are targeted by malicious entities trying to get undue economic advantages by tampering with measurements. 
-Basically, the attacker capability consists of changing the MI expected behavior, tampering any LR component and compromising the reliability of the measurements.
+We consider a simple attack model that can be built from MI use cases, \DIFdelbegin \DIFdel{accordingly }\DIFdelend \DIFaddbegin \DIFadd{according }\DIFaddend to OIML D 31(E) and WELMEC 7.2 guides. MI are targeted by malicious entities trying to get undue \DIFdelbegin \DIFdel{economical }\DIFdelend \DIFaddbegin \DIFadd{economic }\DIFaddend advantages by tampering with measurements. 
+Basically, the attacker capability consists \DIFdelbegin \DIFdel{in }\DIFdelend \DIFaddbegin \DIFadd{of }\DIFaddend changing the MI expected behavior, tampering any LR component and compromising \DIFdelbegin \DIFdel{measurements reliability }\DIFdelend \DIFaddbegin \DIFadd{the reliability of the measurements}\DIFaddend .
 
 We assume the attacker could be any entity with access to the MI components or sensitive features, at any moment of its lifecycle. 
 Attackers can be manufacturers, vendors, clients, and other entities. 
@@ -563,10 +639,10 @@ Once an MI is deployed, vendors and clients can have access to its resources, ex
 Furthermore, modern MI usually provide interfaces for loading software updates and upgrades. % and improvements.
 Such features can be explored by malicious vendors and clients for loading tampered LR software or for modifying critical MI parameters.
 
-Conversely, we establish that an attacker cannot compromise tamper-proof hardware devices, neither cryptographic primitives and communication protocols from algorithms recognized as secure. Also, we also define that an attacker cannot take part in collusion attacks with more than a fraction of peers that integrates the network. The exact value of this fraction depends on the blockchain implementation \cite{Vukolic2016}. %This last restriction is a necessary condition for claiming blockchains as secure architectures.  
+\DIFdelbegin \DIFdel{In opposite}\DIFdelend \DIFaddbegin \DIFadd{Conversely}\DIFaddend , we establish that an attacker cannot compromise tamper-proof hardware devices, neither cryptographic primitives and communication protocols from algorithms recognized as secure. Also, we also define that an attacker cannot take part in collusion attacks with more than a fraction of peers that integrates the network. The exact value of this fraction depends on the blockchain implementation \cite{Vukolic2016}. %This last restriction is a necessary condition for claiming blockchains as secure architectures.  
 
 \subsection{Basic Metrological Assurance Framework (BMAF)}
-We assume the existence of a Basic Metrological Assurance Framework (BMAF) tailored to implement MI regulation and control, which works as a countermeasure to the previously described attack model. Such BMAF gives a minimal set of requirements and activities, which is very realistic since its statements can be found in regulation directives implemented in several countries \cite{Esche2015,Camara2012,Boccardo2014,Luchsinger2008}.
+We assume the existence of a Basic Metrological Assurance Framework (BMAF) tailored to implement MI regulation and control, which works as a countermeasure to the previously described attack model. Such BMAF \DIFdelbegin \DIFdel{explicits }\DIFdelend \DIFaddbegin \DIFadd{gives }\DIFaddend a minimal set of requirements and activities, which is very realistic since its statements can be found in regulation directives implemented in several countries \cite{Esche2015,Camara2012,Boccardo2014,Luchsinger2008}.
 
 Our BMAF sets the following protection requirements:
 \begin{itemize}
@@ -583,12 +659,12 @@ In turn, BMAF also establishes the following control and supervision activities:
 \end{itemize}
 
 \section{Blockchains in Measuring Systems}
-In this section, we compare three different measuring system models: the traditional MI, a cloud-based measuring system and our blockchain-based measuring system model (Figure~\ref{f:compare}). For each model we describe the relevant supervision activities, using different sized icons to represent the expected magnitude of effort and cost associated with it.
+In this section, we compare three different measuring \DIFdelbegin \DIFdel{systems }\DIFdelend \DIFaddbegin \DIFadd{system }\DIFaddend models: the traditional MI, a cloud-based measuring system and our blockchain-based measuring system model (Figure~\ref{f:compare}). For each model we describe the relevant supervision activities, using different sized icons to represent the expected magnitude of effort and cost associated with it.
 
 \begin{figure*}[!t]
 \centering
 \includegraphics[width=.69\textwidth]{measuring} %[width=2.5in]
-\caption{Comparing measuring models: (A) Traditional MI; (B) Cloud Measuring System; (C) Blockchain Measurement System.}
+\caption{Comparing measuring models: (A) Traditional MI; (B) Cloud Measuring System; (C) Blockchain Measurement System\DIFaddbeginFL \DIFaddFL{.}\DIFaddendFL }
 \label{f:compare}
 \end{figure*}
 
@@ -596,14 +672,14 @@ In this section, we compare three different measuring system models: the traditi
 \label{s:mi_traditional}
 Traditional MI can be seen as dedicated computers calculating measurements of a physical quantity (e.g., size, weight, speed). They include sensors for interfacing with the physical world and AD converters for gathering data, besides other LR and NLR components, which are usually software modules. Sensors and AD converters are also LR components, being usually immutable hardware components (Figure~\ref{f:compare}-A).
 
-Although LR and NLR software separation is a well-known concept, many MI manufacturers do not adopt such a practice.
-The claimed reasons are costs, computational resource restrictions or the existence of legacy software. 
+Although LR and NLR software separation is a well-known concept, many MI manufacturers do not adopt such \DIFaddbegin \DIFadd{a }\DIFaddend practice.
+The claimed reasons are costs, computational \DIFdelbegin \DIFdel{resources }\DIFdelend \DIFaddbegin \DIFadd{resource }\DIFaddend restrictions or the existence of \DIFdelbegin \DIFdel{a software legacy }\DIFdelend \DIFaddbegin \DIFadd{legacy software}\DIFaddend . 
 However, despite their complexity, traditional MI software modules are usually monolithic systems \cite{Abreu2017}. 
 This fact affects metrological assurance activities substantially, making MI regulation and control more expensive and complex, due to the following aspects:
 \begin{itemize}
 \item Type approval can demand MI hardware and software evaluation and check against a set of integrity requirements. Since LR and NLR are usually tightly coupled, notified bodies leading type approval need to evaluate and attest the compliance of all software modules. In some cases, LR software source code must be inspected for assuring their correctness.
-\item Software validation and verification can become more difficult due to the diversity of MI use cases, many of them being hard to reproduce out of the real measurement environment. 
-\item Metrological supervision requires notified bodies to have sufficient staff to proceed with MI surveillance activities in both manufacturing and the field. Although physical seals can be helpful to protect physical components, they are ineffective for protecting software components.
+\item Software validation and verification can become more difficult due to the diversity of MI use cases, \DIFdelbegin \DIFdel{being }\DIFdelend many of them \DIFaddbegin \DIFadd{being }\DIFaddend hard to reproduce out of the real measurement environment. 
+\item Metrological supervision requires notified bodies to have sufficient staff to proceed with MI surveillance activities in both manufacturing and the field. Although physical seals can be helpful to protect physical components, they are \DIFdelbegin \DIFdel{innocuous to protect }\DIFdelend \DIFaddbegin \DIFadd{ineffective for protecting }\DIFaddend software components.
 %For instance, fuel pumps supervision requires technicians able to inspect electronics components and identify the ones that do not belong to the original design. Software introspection \cite{Boccardo2014} and platform attestation \cite{Peters2015} are approaches used for providing software identification and integrity check.
 \end{itemize}
 
@@ -622,18 +698,18 @@ MI practically do not include software components anymore once both LR and NLR s
 In practice, MI is now set up as a blend of sensors and AD converters.
 A communication interface allows the MI to send sensing raw data to the cloud measuring system. 
 Basically, the MI could be designed only based on hardware components (e.g., smart sensors, cryptographic chips), although one should consider that some simple software could be necessary.
-In any case, a significant amount of software is moved from the MI to the cloud, being provided as a service. 
+In any case, a significant amount of software is moved from the MI to the cloud, \DIFdelbegin \DIFdel{and it works }\DIFdelend \DIFaddbegin \DIFadd{being provided }\DIFaddend as a service. 
 Consequently, LR and NLR software can be scaled accordingly to the demand.
 
-A DMS easily enables software separation.
+A DMS \DIFdelbegin \DIFdel{also enables easily }\DIFdelend \DIFaddbegin \DIFadd{easily enables }\DIFaddend software separation.
 This happens because LR and NLR software do not run over a monolithic platform anymore.
-That encourages manufacturers to decouple LR and NLR software, which consequently makes LR software less complex.
+That encourages manufacturers to \DIFdelbegin \DIFdel{eliminate coupling between }\DIFdelend \DIFaddbegin \DIFadd{decouple }\DIFaddend LR and NLR software, which consequently makes LR software less complex.
 Such aspect also impacts LR software type approval efforts, saving time and costs associated with documentation analysis, code inspection, and testing.
 %Despite of the challenges, we believe distributed measuring enables a trade-off among complexity and features in MI projects. In our conception, MI could adopt a minimalistic architecture, being composed only by sensors and analog-to-digital converters. All other features, including measurement computation, can be implemented in a distributed network. At the same time, legal metrology needs decentralized supervision capabilities once the resources dispose by notified bodies are scarce when compared with the number of deployed MI. We believe such goals can be achieved by distributed measuring systems using blockchains.
 
 \begin{table*}[t]
 \centering
-\caption{Traditional MI, cloud model and blockchain model security analisys summary.}
+\caption{Traditional MI, cloud model and blockchain model security analisys summary\DIFaddbeginFL \DIFaddFL{.}\DIFaddendFL }
 \label{t:sec_analysis}
 \begin{tabularx}{1\textwidth}{|@{}c|l|X|X@{}|}
 \toprule
@@ -655,8 +731,8 @@ Thus, measurements can be seen as \emph{transactions} whose values must be prote
 Such aspects make DM a typical use case for blockchains applications. 
 
 As a first and intuitive insight, we devise a distributed ledger storing reliable measurement transactions which can be checked by any involved party. 
-Also, the blockchain would support the execution of LR (and even NLR) software using smart contracts, which process information from sensors and generate a consolidated measurement value. 
-The integrity of measurements and LR software (as smart contracts) is preserved by the blockchain inherent properties \cite{Zheng2017}.
+Also, the blockchain \DIFdelbegin \DIFdel{also }\DIFdelend would support the execution of LR (and even NLR) software using smart contracts, which process information from sensors and generate a consolidated measurement value. 
+The integrity of measurements and LR software (as smart contracts) is preserved by \DIFaddbegin \DIFadd{the }\DIFaddend blockchain inherent properties \cite{Zheng2017}.
 The ledger accounting enables the management of cumulative consumption transactions, such as energy and gas metering.
 If a financial blockchain platform is used, it can integrate billing and payment functions. 
 That is an interesting additional resource when compared to the cloud model.
@@ -673,19 +749,20 @@ In most use cases, MI belong to one of the parties interested in the measurement
 Energy and fuel are typical examples where vendors of goods own the MI.
 In the cloud model, one can expect that an interested party will hold the cloud measuring services. 
 On the other hand, the blockchain is a truly decentralized architecture, being held potentially by several parties. 
-Thus, one can expect that a blockchain model will require the contribution of different parties interested in the measurement activities, and consequently it will need to be designed following a different philosophy.
+Thus, one can expect that a blockchain model will require the contribution of different parties interested in the measurement activities, and consequently it \DIFaddbegin \DIFadd{will }\DIFaddend need to be \DIFdelbegin \DIFdel{idealized }\DIFdelend \DIFaddbegin \DIFadd{designed }\DIFaddend following a different philosophy.
 
 In the blockchain model, we devise measuring as \emph{a service offered by someone without any interest in the measured quantity}. 
 This idea is remarkably distinct to the traditional scenario where a vendor provides MI for measuring and is rewarded proportionally to the measurement. 
 This idea fits very well in the blockchain model. 
 Smart contracts can be used for computing measurements based on sensing information. 
-However, they are coded by different parties that do not have conflicts of interest related to the measured quantity.
-Whatever the measurement result is, these parties shall be rewarded by a pre-set value. 
+However, they are coded by different parties that do not have conflicts of \DIFdelbegin \DIFdel{interests }\DIFdelend \DIFaddbegin \DIFadd{interest }\DIFaddend related to the measured quantity.
+Whatever the measurement result \DIFaddbegin \DIFadd{is}\DIFaddend , these parties shall be rewarded by a \DIFdelbegin \DIFdel{preset }\DIFdelend \DIFaddbegin \DIFadd{pre-set }\DIFaddend value. 
 That motivates new players to provide better measuring algorithms.
 %once as faster they execute, more credits they can earn.
 Additionally, this strategy creates incentives for keeping the blockchain network since that becomes profitable. 
 %One could argue that such concept is an innovative idea once it breaks with the manner MI are traditionally used in consumer relations.
-This concept also breaks the traditional way MI are used in consumer relations, creating a new market for players who want to offer computing services for measuring. 
+This concept also breaks \DIFdelbegin \DIFdel{with the manner MI are traditionally }\DIFdelend \DIFaddbegin \DIFadd{the traditional way MI are }\DIFaddend used in consumer relations\DIFdelbegin \DIFdel{.
+Furthermore, it creates }\DIFdelend \DIFaddbegin \DIFadd{, creating }\DIFaddend a new market for players who want to offer computing services for measuring. 
 
 The blockchain model also enables a set of complementary activities involving MI market and field surveillance that can be done by checking measurements inserted in the distributed ledger.
 Besides notified bodies, any entity representing society interests, consumers, goods providers, among others, can take part in additional supervision activities.
@@ -695,7 +772,7 @@ Such efforts can include smart contracts for generating redundant measurements f
 A last important aspect is the intrinsic blockchain robustness against attacks and failures.
 Since blockchains make extensive use of cryptography in both transactions and storing, information reaches a high level of protection regarding authenticity and integrity assurance.
 The known security attacks that can compromise a blockchain network are related to collusion among the stakeholders that participate in the consensus decision \cite{karame2016bitcoin}.
-However, as more organizations take part in the consensus, more expensive and unfeasible these attacks become.
+However, \DIFdelbegin \DIFdel{the }\DIFdelend \DIFaddbegin \DIFadd{as }\DIFaddend more organizations take part in the consensus, more expensive and unfeasible these attacks become.
 Thus blockchains can provide a secure mechanism for assuring the legal liability and trustworthiness of instruments and measurements.
 
 %at Section \ref{s:sec_analysis}.
@@ -726,21 +803,21 @@ We consider the attacks and the metrological assurance framework BMAF described 
 We demonstrate how the traditional MI and DMS impact BMAF requirements and activities.  
 Table \ref{t:sec_analysis} depicts such analysis.
 
-Initially, we evaluate traditional MI security. 
+Initially, we evaluate \DIFdelbegin \DIFdel{the }\DIFdelend traditional MI security. 
 In this scenario, one should note that BMAF requirements and activities are necessary to prevent attacks.
-As already discussed at Section \ref{s:mi_traditional}, the activities of control and supervision of traditional MI involve a substantial effort.
-Documentation analysis, code inspection, and software validation and verification need to be done on all components and software modules.
+As already discussed at Section \ref{s:mi_traditional}, the \DIFdelbegin \DIFdel{efforts required for proceeding with traditional MI }\DIFdelend \DIFaddbegin \DIFadd{activities of }\DIFaddend control and supervision \DIFdelbegin \DIFdel{activities are distinguished}\DIFdelend \DIFaddbegin \DIFadd{of traditional MI involve a substantial effort}\DIFaddend .
+Documentation analysis, code inspection, and software validation and verification need to \DIFdelbegin \DIFdel{comprise }\DIFdelend \DIFaddbegin \DIFadd{be done on }\DIFaddend all components and software modules.
 In turn, supervision also requires experienced surveillance technicians to implement inspection and software integrity checks.
 
 When the cloud model is analyzed, one can notice that MI become simpler because LR and NLR software are now running in the cloud.
 Additionally, such situation reduces the capabilities of a typical attacker (e.g., consumers do not have physical access to MI software interfaces anymore).
 The BMAF protection requirements are still necessary, however requirements R2 and R3 are applied on the LR software implemented in the cloud. 
 Supervision activities are also impacted, requiring fewer efforts to be executed.
-In A1, the document analysis and the code inspection of LR software running in the cloud are expected to require less effort than embedded software evaluation. 
+In A1, the document analysis and the code inspection of LR software running in the cloud are expected to require \DIFdelbegin \DIFdel{fewer efforts }\DIFdelend \DIFaddbegin \DIFadd{less effort }\DIFaddend than embedded software evaluation. 
 Activity A2 is also made simpler once LR software tests can now be performed using interface stubs, without the need of real MI physical environment. 
-Similarly, A3 also becomes less expensive because LR software identification and integrity check are executed against cloud servers, which are far fewer than the deployed MI. 
+\DIFdelbegin \DIFdel{In turn}\DIFdelend \DIFaddbegin \DIFadd{Similarly}\DIFaddend , A3 also becomes less expensive because LR software identification and integrity check are executed against cloud servers, which are far fewer than the deployed MI. 
 Finally, field surveillance for checking MI physical seals can also be eliminated. 
-If we assume simplified MI as immutable instruments, they can be conceived as tamper-proof devices. 
+If we assume simplified MI as immutable instruments, they can be conceived as \DIFdelbegin \DIFdel{tamper proofing }\DIFdelend \DIFaddbegin \DIFadd{tamper-proof }\DIFaddend devices. 
 That approach could eliminate the need for verifying MI seals as it implies that the MI will be permanently damaged and any attack trying to explore such vulnerability will not succeed.
 
 Lastly, we evaluate the blockchain model. 
@@ -749,17 +826,17 @@ LR software is now a smart contract whose the deployment rules can be enforced f
 Once deployed, LR software is distributed among the peers, and it cannot be changed anymore.
 Blockchain peers cannot execute a different smart contract code. Otherwise, blockchain security assumptions will be violated.
 In consequence, R2 also becomes unnecessary.
-Regarding the activities, although A1 and A2 are still necessary, they should become much simpler when compared to the other models.
-This happens because the structure of smart contracts significantly limits the complexity resulting from having different technologies, software components and programming languages while imposing software separation.
-Finally, A3 becomes unnecessary in a blockchain network for the same reasons as R2.
+Regarding the activities, although A1 and A2 are still necessary, they should become much simpler when compared to the \DIFdelbegin \DIFdel{required effort in the }\DIFdelend other models.
+\DIFdelbegin \DIFdel{That is }\DIFdelend \DIFaddbegin \DIFadd{This happens }\DIFaddend because the structure of smart contracts \DIFdelbegin \DIFdel{limits significantly }\DIFdelend \DIFaddbegin \DIFadd{significantly limits }\DIFaddend the complexity resulting from having different technologies, software components and programming languages while imposing software separation.
+Finally, A3 becomes unnecessary in a blockchain network \DIFdelbegin \DIFdel{due to }\DIFdelend \DIFaddbegin \DIFadd{for }\DIFaddend the same reasons as R2.
 
 We conclude that while DM already reduces attackers capabilities, such reduction is more accentuated in the blockchain model. 
-Once LR software is produced by players who are exempted from conflicts of interest, many activities related to the assurance of software correctness and integrity are made simpler or even unnecessary. 
+Once LR software is produced by players who are exempted from \DIFdelbegin \DIFdel{conflict of interests}\DIFdelend \DIFaddbegin \DIFadd{conflicts of interest}\DIFaddend , many activities related to the assurance of software correctness and integrity are made simpler or even unnecessary. 
 The blockchain security properties play an important role in this context. 
 
 \section{Case Study}
 \subsection{Speed meters and the case study scenario}
-In this section, we develop an experiment to demonstrate the feasibility of our proposal.
+In this section, we develop an experiment to demonstrate \DIFdelbegin \DIFdel{our proposal feasibility}\DIFdelend \DIFaddbegin \DIFadd{the feasibility of our proposal}\DIFaddend .
 It consists of a vehicle speed DMS using blockchains (Figure \ref{f:speedmeter}).
 These meters are efficient solutions for estimating vehicle speed on public roads, generating traffic statistics and enforcing speed limits for drivers \cite{Ki2006,S2011}.
 The meter detects each vehicle, determines its speed and captures one or more pictures identifying the vehicle's license plate when necessary.
@@ -767,33 +844,40 @@ The measurement and the license plate image constitute the legally relevant reco
 
 We choose the city of Sao Paulo, in Brazil, as a case study.
 Sao Paulo has a vehicular fleet with more than 8 million vehicles and about one thousand speed meters deployed along its roads \cite{CompanhiadeEngenhariadeTrafego-CET2017}.
-Furthermore, over the last two years, we have proceeded with formal type approval of speed meters in the Brazilian National Institute of Metrology, Quality and Technology (Inmetro\footnote{\url{http://www.inmetro.gov.br}}).
-This experience provides valuable information that supports the analysis in this section.  
+Furthermore, over the last two years, we have proceeded with formal type approval of speed meters in the Brazilian National Institute of Metrology, Quality and Technology (Inmetro\DIFdelbegin \DIFdel{)}\DIFdelend \footnote{\url{http://www.inmetro.gov.br}}\DIFaddbegin \DIFadd{)}\DIFaddend .
+This experience provides valuable information that supports \DIFdelbegin \DIFdel{our }\DIFdelend \DIFaddbegin \DIFadd{the }\DIFaddend analysis in this section.  
 
-Developing countries are essentially guided for legal metrology policies related to fraud detection and avoidance \cite{RodriguesFilho2015,Camara2012,Luchsinger2008}.
+Developing countries are essentially guided for legal metrology policies related to fraud detection and avoidance \DIFdelbegin \DIFdel{\mbox{%DIFAUXCMD
+\cite{Luchsinger2008,Camara2012,RodriguesFilho2015}}\hspace{0pt}%DIFAUXCMD
+}\DIFdelend \DIFaddbegin \DIFadd{\mbox{%DIFAUXCMD
+\cite{RodriguesFilho2015,Camara2012,Luchsinger2008}}\hspace{0pt}%DIFAUXCMD
+}\DIFaddend .
 In the majority of cases, these countries adopt restrictive legal metrology activities, which include detailed type approval processes and intensive metrological inspection, especially field surveillance.
 That is the Brazilian reality regarding vehicle speed meters.
 These instruments are under restrictive regulation and control directives, which associates them to a WELMEC 7.2 class-D risk level \cite{EuropeanCooperationinLegalMetrologyWELMEC2015}.
-In this aspect, the blockchain-based DMS can introduce promising advantages, as it simplifies the metrological assurance framework activities, while preserving many of the advantages from a DMS in terms of performance and costs saving.
+In this aspect, the blockchain-based DMS can introduce promising advantages\DIFdelbegin \DIFdel{.
+It }\DIFdelend \DIFaddbegin \DIFadd{, as it }\DIFaddend simplifies the metrological assurance framework activities, \DIFdelbegin \DIFdel{at the same time that keeps }\DIFdelend \DIFaddbegin \DIFadd{while preserving }\DIFaddend many of the advantages from a DMS \DIFdelbegin \DIFdel{concerning }\DIFdelend \DIFaddbegin \DIFadd{in terms of }\DIFaddend performance and costs saving.
 
 \subsection{Conceiving a vehicle speed meter DMS}
 In Brazil, vehicle speed meters are usually built as \emph{Type-U instruments}.
 WELMEC 7.2 \cite{EuropeanCooperationinLegalMetrologyWELMEC2015} defines this classification as instruments that run their software in universal computer hardware.
 This happens because speed meters nowadays have an extensive list of requirements and aggregate a large number of NLR features.
 Consequently, their software usually is quite complex and hard to evaluate and test.
-Besides, speed meters manufacturers complain about opening their solutions for inspection due to intellectual property issues.
-That is the case of the speed meters evaluated in Inmetro.
+Besides, speed meters manufacturers complain about opening their \DIFdelbegin \DIFdel{complete solution }\DIFdelend \DIFaddbegin \DIFadd{solutions }\DIFaddend for inspection due to intellectual property issues.
+That is the case of the speed meters evaluated \DIFdelbegin \DIFdel{for us }\DIFdelend in Inmetro.
 So they are representative cases of the traditional MI model described in this work.
 
-Another aspect is that speed meter owners usually deploy their equipment at far places along roads spread over large geographic areas.
+Another aspect is that speed \DIFdelbegin \DIFdel{meters }\DIFdelend \DIFaddbegin \DIFadd{meter }\DIFaddend owners usually deploy their equipment at far places along roads spread over large geographic areas.
 That increases the difficulty of regular inspection activities and consequently increases costs associated with metrological surveillance.
-Thus, all those aspects make speed meters strong candidates for solutions that help to separate LR and NLR software.
-%, while offering efficiencies for legal metrology activities such as documentation analysis, code inspection, V\&V, and field surveillance.
+Thus, all those aspects make speed meters strong candidates for solutions that help to separate LR and NLR software\DIFdelbegin \DIFdel{, while offering easiness for legal metrology activities such as documentation analysis, code inspection, V\&V, and field surveillance.
+}\DIFdelend \DIFaddbegin \DIFadd{.
+%DIF > , while offering efficiencies for legal metrology activities such as documentation analysis, code inspection, V\&V, and field surveillance.
+}\DIFaddend 
 
-We implement such a solution creating a blockchain network for distributed measuring.
-We integrate the speed meter's LR features in a simple tamper-proof hardware that uses two inductive sensors to capture the vehicle's magnetic profile \cite{S2011}.
+We implement such \DIFaddbegin \DIFadd{a }\DIFaddend solution creating a blockchain network for distributed measuring.
+We \DIFdelbegin \DIFdel{condense }\DIFdelend \DIFaddbegin \DIFadd{integrate }\DIFaddend the speed meter's LR features in a simple \DIFdelbegin \DIFdel{tamper proofing }\DIFdelend \DIFaddbegin \DIFadd{tamper-proof }\DIFaddend hardware that uses two inductive sensors to capture the vehicle's magnetic profile \cite{S2011}.
 After detecting a vehicle, this hardware uses a private key to sign the sensor's raw data and sends that to a blockchain-based DMS.
-The blockchain executes the LR software as a smart contract and computes the vehicle speed.
+\DIFdelbegin \DIFdel{In turn, the }\DIFdelend \DIFaddbegin \DIFadd{The }\DIFaddend blockchain executes the LR software as a smart contract and computes the vehicle speed.
 The vehicle detection event also triggers any other device used for providing complementary evidence (e.g., a camera that captures the vehicle license plate).
 Furthermore, manufacturers may aggregate any other module necessary for implementing NLR functionalities or even use the blockchain to do that.
 Their decision does not affect the legal metrology activities once NLR features are not under regulation.
@@ -801,7 +885,7 @@ Their decision does not affect the legal metrology activities once NLR features 
 \begin{figure}[!t]
 \centering
 \includegraphics[width=.45\textwidth]{speedmeter} %[width=2.5in]
-\caption{The blockchain-based vehicle speed DMS.}
+\caption{The blockchain-based vehicle speed DMS\DIFaddbeginFL \DIFaddFL{.}\DIFaddendFL }
 \label{f:speedmeter}
 \end{figure}
 
@@ -809,21 +893,21 @@ Their decision does not affect the legal metrology activities once NLR features 
 Our prototype uses Hyperledger Fabric \cite{Androulaki2018} as a permissioned blockchain, where the peers cooperate to store measurements and execute LR software.
 Fabric is an open source blockchain platform that includes two concepts that are very helpful for implementing our idea: \emph{endorsers} and \emph{security policies}.
 
-Endorsers are peers that effectively execute smart contracts, which are called \emph{chaincodes} in Fabric.
+Endorsers are peers that effectively execute smart contracts, which are called \DIFdelbegin \DIFdel{chaincodes }\DIFdelend \DIFaddbegin \emph{\DIFadd{chaincodes}} \DIFaddend in Fabric.
 The way endorsers operate has significant implications concerning intellectual property and performance.
 First, a manufacturer needs to reveal her LR software only to peers contracted to execute her measuring chaincode as a service, and to the notified body responsible for approving it.
 Second, a manufacturer can size his solution performance by providing as many endorser peers as necessary, resulting in a scalable architecture.
 
-Security policies can set the way the network validates the measurement provided by endorsers.
-These policies can also work as a protection mechanism against collusion attacks and implement metrological surveillance.
+\DIFdelbegin \DIFdel{In turn, security }\DIFdelend \DIFaddbegin \DIFadd{Security }\DIFaddend policies can set the way the network validates the measurement provided by endorsers.
+\DIFdelbegin \DIFdel{Security }\DIFdelend \DIFaddbegin \DIFadd{These }\DIFaddend policies can also work as a protection mechanism against collusion attacks and implement metrological surveillance.
 Blockchain networks are constituted by peers that belong to different stakeholders or organizations.
 Although they do not need to trust each other, each peer continually verifies other peers behavior.
 Security policies define rules for such monitoring.
 They can specify, for instance, which organizations must take part in a transaction endorsement (i.e., a measurement calculation).
-The more organizations are involved, the more expensive it becomes to carry out a collusion attack.
-Such monitoring activities are a sort of metrological surveillance since different organizations are continually checking the measurements resulting from a chaincode execution.
+The more organizations are involved, the more expensive it becomes \DIFaddbegin \DIFadd{to carry out }\DIFaddend a collusion attack.
+Such monitoring activities are a sort of metrological surveillance since different organizations are continually checking the measurements resulting from \DIFaddbegin \DIFadd{a }\DIFaddend chaincode execution.
 
-Since we resort to a permissioned blockchain, the consensus protocol plays an important role in our experiment.
+Since we resort to a permissioned blockchain, the consensus \DIFaddbegin \DIFadd{protocol }\DIFaddend plays an important role in our experiment.
 Fabric refers to consensus as an \emph{orderer service}.
 We perform our experiment with two different types of orderer services: the \emph{solo orderer} and the \emph{Byzantine Fault-Tolerant (BFT) orderer}.
 The solo orderer service is native from Fabric distribution, and it is very practical to implement tests and develop proof of concept prototypes.
@@ -833,7 +917,7 @@ Thus, one can configure the BFT orderer with several replicas, with different or
 Such approach employs a decentralized consensus provided by the BFT-SMaRt replication library \cite{Bessani2014}, thus providing security against collusion attacks.
 
 \subsection{Describing MI regulation and control activities}
-We set up our vehicle speed DMS as illustrated in Figure~\ref{f:scheme}.
+We set up our vehicle speed DMS \DIFdelbegin \DIFdel{according to the scheme }\DIFdelend \DIFaddbegin \DIFadd{as illustrated }\DIFaddend in Figure~\ref{f:scheme}.
 Inmetro and LaSIGE represent two independent organizations with distinct functions.
 Inmetro is a notified body responsible for regulating and controlling such instruments.
 LaSIGE provides computational resources for executing LR software from speed meters.
@@ -847,7 +931,7 @@ When the meter also enforces speed limits, one or more images from the vehicle's
 Such requirement brings some concerns about privacy.
 Although the image is part of the legally relevant information, it is not necessary for determining the vehicle speed.
 So one can use different approaches to avoid problems with privacy.
-One idea consists of encrypting the images using asymmetric cryptography before sending them to the blockchain.
+\DIFdelbegin \DIFdel{An idea consists in }\DIFdelend \DIFaddbegin \DIFadd{One idea consists of }\DIFaddend encrypting the images using asymmetric cryptography before sending them to the blockchain.
 One can do that using the public key of the legal authority responsible for issuing traffic tickets.
 A better alternative is to send only the image digital signature to the blockchain.
 The image is kept in a private data storage, and the blockchain can attest its integrity and authenticity whenever necessary.
@@ -861,9 +945,9 @@ After, the notified body executes the applicable tests for assuring all MI LR fu
 Once MI hardware and software are approved, the notified body is responsible for instantiating the chaincode in the blockchain.
 
 In Fabric, a chaincode instantiation includes the notification of endorsers that will execute that chaincode.
-To do that, the notified body inserts into the blockchain a new transaction comprised by the chaincode fingerprint (i.e., the software image hash) and its respective security policy.
+To do that, the notified body inserts into the blockchain a new transaction comprised by the chaincode \DIFdelbegin \DIFdel{'s }\DIFdelend fingerprint (i.e., the software image hash) and its respective security policy.
 Thus all the peers in the network know how to validate the chaincode execution by checking the applicable security policies.
-After instantiation, the chaincode fingerprint becomes immutable, following the intrinsic blockchain properties.
+After \DIFdelbegin \DIFdel{instantiated}\DIFdelend \DIFaddbegin \DIFadd{instantiation}\DIFaddend , the chaincode fingerprint becomes immutable, following the intrinsic blockchain properties.
 Any future update in the chaincode will require a new instance of it, which means to create a new chaincode version.
 
 After Inmetro instantiates the LR chaincode, any MI owner can contract computing services from the LaSIGE organization for executing the respective LR software.
@@ -877,19 +961,20 @@ That enables any MI in the field to generate transactions, ask endorsers to dete
 \begin{figure}[!t]
 \centering
 \includegraphics[width=.45\textwidth]{hlfscheme} %[width=2.5in]
-\caption{Vehicle speed DMS solution scheme.}
+\caption{Vehicle speed DMS solution scheme\DIFaddbeginFL \DIFaddFL{.}\DIFaddendFL }
 \label{f:scheme}
 \end{figure}
 
 \subsection{Security analysis}
 We verify how our implementation offers countermeasures against common attacks associated with the capabilities described at the Section~\ref{s:attackmodel}.
-These countermeasures match the properties already discussed in Section~\ref{s:sec_analysis}.
-%We describe some attacks and how the implementation using a simple MI conception and Fabric blockchain addresses them.
-In the following we describe some attacks and how our blockchain-based DMS deals with them.
+These countermeasures match \DIFdelbegin \DIFdel{with }\DIFdelend the properties already discussed \DIFdelbegin \DIFdel{at the Security Analysis.
+We }\DIFdelend \DIFaddbegin \DIFadd{in Section~\ref{s:sec_analysis}.
+%DIF > We describe some attacks and how the implementation using a simple MI conception and Fabric blockchain addresses them.
+In the following we }\DIFaddend describe some attacks and how \DIFdelbegin \DIFdel{the implementation using a simple MI conception and Fabric blockchain addresses }\DIFdelend \DIFaddbegin \DIFadd{our blockchain-based DMS deals with }\DIFaddend them.
 
 \subsubsection{An attacker tries to compromise the speed meter hardware integrity}
 We conceive the speed meter hardware as a tamper-proof device.
-Consequently, any attempt at violating seals or stealing a private key shall destroy the speed meter hardware, forcing its replacement and exposing the attacker.
+Consequently, any attempt at violating seals or stealing a private key shall \DIFdelbegin \DIFdel{flaw }\DIFdelend \DIFaddbegin \DIFadd{destroy }\DIFaddend the speed meter hardware, forcing its replacement and exposing the attacker.
 
 \subsubsection{An attacker tries to install a malicious chaincode in an endorser peer}
 The blockchain ledger contains the fingerprint of every instantiated chaincode, and legitimate endorsers automatically check the LR chaincode integrity on deploy time.
@@ -899,10 +984,10 @@ That can be useful in audits for detecting attacks against software integrity in
 
 \subsubsection{An attacker can collude with an organization for loading malicious chaincode in endorser peers}
 Security policies assure protection against collusion attacks.
-For instance, suppose that an attacker colludes with LaSIGE, making compromised peers accept a modified LR chaincode.
+For instance, suppose that an attacker \DIFdelbegin \DIFdel{gets collusion }\DIFdelend \DIFaddbegin \DIFadd{colludes }\DIFaddend with LaSIGE, \DIFdelbegin \DIFdel{obtaining compromised peers that }\DIFdelend \DIFaddbegin \DIFadd{making compromised peers }\DIFaddend accept a modified LR chaincode.
 One can avoid such attack by enforcing security policies defining that at least N peers of different organizations must endorse the chaincode execution.
 Thus, a collusion attack including only the LaSIGE organization will not succeed.
-The attacker needs to compromise more organizations, which makes the attack too expensive and, consequently, unfeasible.
+The attacker needs to compromise more organizations, which makes the attack too expensive and\DIFdelbegin \DIFdel{consequently }\DIFdelend \DIFaddbegin \DIFadd{, consequently, }\DIFaddend unfeasible.
 
 \subsubsection{An attacker has success in colluding with enough peers for injecting fraudulent measurements in the blockchains}
 One should remember that, in the proposed DMS, organizations compute measurements as an independent service (i.e., they do not have any advantage or reward regarding the measurement result).
@@ -927,8 +1012,8 @@ We estimate the experiment demand based on vehicles traffic real data.
 According to a technical report from the Sao Paulo's Traffic Engineering Company 
 (CET-SP) \cite{CompanhiadeEngenhariadeTrafego-CET2017}, there was in 2016 approximately one thousand speed meters spread along the city.
 The same report analyses the vehicles flow on the main roads in the city and points out an average of 2,772 vehicles/hour (or 0.76 vehicles/sec) during rush hour.
-Assuming such demand for a total of 1 thousand speed meters, we need a blockchain network able to process something around 800 tps (transactions per second).
-Androulaki et al. \cite{Androulaki2018} benchmarks Fabric performance in something between 2,000 to 3,000 tps.
+Assuming such demand for a total of 1 thousand speed meters, we need a blockchain network able to process something around 800 \DIFdelbegin \DIFdel{tsp }\DIFdelend \DIFaddbegin \DIFadd{tps }\DIFaddend (transactions per second).
+Androulaki et al. \cite{Androulaki2018} benchmarks Fabric performance in something between 2,000 to 3,000 \DIFdelbegin \DIFdel{tsp}\DIFdelend \DIFaddbegin \DIFadd{tps}\DIFaddend .
 However, they consider specific scenarios with proper customizations for evaluating particular performance issues.
 Our experiment does not employ any specific customization.
 We use Fabric just as provided by its developers, in an ordinary hardware infrastructure available in any datacenter.
@@ -948,12 +1033,12 @@ The second scenario uses the orderer service developed by Sousa et al. \cite{Sou
 %We configure this service to work with four replicas.
 
 The client transactions load is mimicked using four nodes from a Dell PowerEdge R300 cluster, each one with an Intel Xeon Processor L5410 with 2.33 GHz and 8 GB of RAM.
-The transactions simulation uses real data from speed meters developed by the company Perkons\footnote{\url{http://www.perkons.com}} SA, which kindly granted a dataset for this experiment.
+The transactions simulation uses real data from speed meters developed by the company Perkons\DIFdelbegin \DIFdel{SA}\DIFdelend \footnote{\url{http://www.perkons.com}} \DIFaddbegin \DIFadd{SA}\DIFaddend , which kindly granted a dataset for this experiment.
 
 \begin{figure}[!t]
 \centering
 \includegraphics[width=.45\textwidth]{chartsolo} %[width=2.5in]
-\caption{Throughput and latency using native Fabric solo orderer.}
+\caption{Throughput and latency using native Fabric solo orderer\DIFaddbeginFL \DIFaddFL{.}\DIFaddendFL }
 \label{f:latth}
 \end{figure}
 
@@ -971,7 +1056,7 @@ We try to produce a maximum workload by increasing the number of clients.
 %In fact, there are some difficulties in effectively generating this number of concurrent transactions without modifying the Fabric implementation.
 % Even so, the measured throughput and latency are precise once they comprise the receiving of all simulated transactions by the orderer service.
 
-When a client instance is created, it selects a vector of bytes containing the sensors raw data from the dataset mentioned above, for each transaction.
+When a client \DIFdelbegin \DIFdel{process }\DIFdelend instance is created, it selects a vector of bytes containing the sensors raw data from the dataset mentioned above, for each transaction.
 Clients use the Fabric protocol to invoke an LR chaincode and send such data as an argument to an endorser peer from LaSIGE organization.
 The endorser peer receives the vector of bytes, calculates the vehicle speed, and returns an endorsed package with the respective measurement.
 The client uses such package for composing the complete transaction and sends it to the orderer service responsible for generating the ledger blocks and disseminate them to the other peers.
@@ -995,28 +1080,30 @@ Such information gives the throughput and latency of the system. %estimates for 
 
 \subsection{Performance test results}
 Figures \ref{f:latth} and \ref{f:latthbft4} depict our tests results for the system using the solo orderer and the BFT orderer with 4 replicas, respectively.
-With the solo orderer service, throughput and latency reach a better trade-off around 300 tps and 1 second, respectively.
+With \DIFaddbegin \DIFadd{the }\DIFaddend solo orderer service, throughput and latency reach a better trade-off around 300 tps and 1 second, respectively.
 The workload necessary to get such results corresponds to 600 simultaneous clients.
 With a higher workload, performance degrades substantially.
 We reach a throughput of around 260 tps and a high latency of 12 seconds when testing a workload from 1,200 clients.
-This high latency can be explained by the transactions queuing in the solo orderer.
-%A strategy of queuing transactions in the solo orderer can explain the high latency.
-%However, this method compromises performance, resulting in low throughput and misusing of the MI communication channel.
+\DIFdelbegin \DIFdel{A strategy of queuing transactions }\DIFdelend \DIFaddbegin \DIFadd{This high latency can be explained by the transactions queuing }\DIFaddend in the solo orderer\DIFdelbegin \DIFdel{can explain the high latency.
+}\DIFdelend \DIFaddbegin \DIFadd{.
+%DIF > A strategy of queuing transactions in the solo orderer can explain the high latency.
+}\DIFaddend %However, this method compromises performance, resulting in low throughput and misusing of the MI communication channel.
 
-The BFT orderer service with four replicas performs better.
+\DIFdelbegin \DIFdel{In turn, the }\DIFdelend \DIFaddbegin \DIFadd{The }\DIFaddend BFT orderer service with four replicas performs better.
 It reaches the best trade-off with a throughput of 380 tps and a latency in 1.6 seconds with the same workload of 600 simultaneous clients.
-The BFT orderer also keeps throughput stable at about 360 tps even with a workload of 1,200 clients, presenting only a slight increase of 1 second in latency.
-The BFT orderer optimizes latency by discarding the exceeding of transactions after reaching its max throughput.
-However, clients need to control refused transactions, creating their queue and resending the transaction again after some time.
+The BFT orderer also keeps throughput \DIFdelbegin \DIFdel{in a steady state }\DIFdelend \DIFaddbegin \DIFadd{stable at }\DIFaddend about 360 tps even with a workload of 1,200 clients, presenting only a slight increase \DIFdelbegin \DIFdel{in latency }\DIFdelend of 1 second \DIFdelbegin \DIFdel{.
+}\DIFdelend \DIFaddbegin \DIFadd{in latency.
+The }\DIFaddend BFT orderer optimizes latency by discarding the exceeding of transactions after reaching \DIFdelbegin \DIFdel{the }\DIFdelend \DIFaddbegin \DIFadd{its }\DIFaddend max throughput.
+However, clients need to control refused transactions, creating \DIFdelbegin \DIFdel{an own queue and trying to send }\DIFdelend \DIFaddbegin \DIFadd{their queue and resending }\DIFaddend the transaction again after some time.
 
-\begin{figure}[!t]
+\DIFaddbegin \begin{figure}[!t]
 \centering
-\includegraphics[width=.45\textwidth]{chartbft4r} %[width=2.5in]
-\caption{Throughput and latency using BFT orderer with four replicas.}
+\includegraphics[width=.45\textwidth]{chartbft4r} %DIF > [width=2.5in]
+\caption{\DIFaddFL{Throughput and latency using BFT orderer with four replicas.}}
 \label{f:latthbft4}
 \end{figure}
 
-The BFT orderer service also includes an important aspect.
+\DIFadd{The }\DIFaddend BFT orderer service also includes an important aspect.
 It enables a truly distributed consensus service, once each replica belongs to a different organization.
 Although the number of replicas impacts performance \cite{Bessani2014}, it aggregates security by preventing collusion attacks.
 
@@ -1025,7 +1112,20 @@ However, we understand that the blockchain can absorb such demand along the day 
 We conclude that Fabric performs satisfactorily for implementing a speed meter DMS.
 Furthermore, if necessary, one can even reach a better performance by customizing Fabric features, something indeed feasible once the platform is an open source software product.
 
-\section{Quantitative Assessment}
+\DIFdelbegin %DIFDELCMD < \begin{figure}[!t]
+%DIFDELCMD < \centering
+%DIFDELCMD < \includegraphics[width=.45\textwidth]{chartbft4r} %%%
+%DIF < [width=2.5in]
+%DIFDELCMD < \caption{%
+{%DIFAUXCMD
+\DIFdelFL{Throughput and latency using BFT orderer with four replicas}}
+%DIFAUXCMD
+%DIFDELCMD < \label{f:latthbft4}
+%DIFDELCMD < \end{figure}
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdelend \section{Quantitative Assessment}
 In this section, we provide some quantitative assessment regarding the adoption of the blockchain-based DMS model, when compared with traditional MI.
 We do that by evaluating advantages and drawbacks related to both technologies (Table~\ref{t:quantitative}).
 The discussions present in the section are not exhaustive.
@@ -1036,23 +1136,23 @@ However, we believe that the discussed aspects are useful for providing assessme
 There is a direct relation between the size of a software product and the number of software defects.
 Alhazmi et al. \cite{Alhazmi2007} estimate that the ratio of remaining vulnerabilities to the total number of software defects is often in the range of 1–5\%.
 Considering that, we estimate how much the amount of LR software can impact the security of traditional MI and blockchain-based DMS.
-In our analysis, we adopt the average ratio of approximately 6 D/kLOC (defects by thousands of lines of code) reported by Carrozza et al. \cite{Carrozza2015}.
+In our analysis, we adopt the average ratio of approximately 6 D/\DIFdelbegin \DIFdel{KLOC }\DIFdelend \DIFaddbegin \DIFadd{kLOC }\DIFaddend (defects by thousands of lines of code) reported by Carrozza et al. \cite{Carrozza2015}.
 In our experience with speed meters type approval at Inmetro, we found that LR software average size is around of 3,000 LOCs.
-This software size statistically suggests the existence of about 18 software defects and, consequently, a high probability of having a vulnerability.
-Such LR software size is a consequence of the strong coupling between LR and NLR modules.
+This software size statistically suggests the \DIFdelbegin \DIFdel{remaining }\DIFdelend \DIFaddbegin \DIFadd{existence }\DIFaddend of about 18 software defects and, consequently, a high probability of \DIFdelbegin \DIFdel{the existence of potential }\DIFdelend \DIFaddbegin \DIFadd{having a }\DIFaddend vulnerability.
+Such LR software size is a consequence of the strong coupling \DIFdelbegin \DIFdel{which imposes dependences among }\DIFdelend \DIFaddbegin \DIFadd{between }\DIFaddend LR and NLR modules.
 When one considers only the software effectively used in measuring, the LR software size can be remarkably reduced.
 We confirm that in our speed meter DMS implementation.
-Its LR software consists of a Go language chaincode that requires no more than 200 LOCs.
-Such size points out an estimate of no more than two remaining software defects, which also reduces the chances of potential vulnerabilities.
+Its LR software consists of a Go language \DIFdelbegin \DIFdel{smart contract }\DIFdelend \DIFaddbegin \DIFadd{chaincode }\DIFaddend that requires no more than 200 LOCs.
+Such size points out an \DIFdelbegin \DIFdel{estimative }\DIFdelend \DIFaddbegin \DIFadd{estimate }\DIFaddend of no more than two remaining software defects, which also reduces the chances of potential vulnerabilities.
 
 \begin{table}[t!]
 \centering
-\caption{Advantages and drawbacks of the Traditional MI and our Fabric DMS implementation.}
+\caption{Advantages and drawbacks of the Traditional MI and our Fabric DMS implementation\DIFaddbeginFL \DIFaddFL{.}\DIFaddendFL }
 \label{t:quantitative}
 \begin{tabularx}{0.47\textwidth}{|@{}l|c|c@{}|}
 \toprule
 \textbf{Evaluated aspect}             & \textbf{Traditional MI} & \textbf{Fabric DMS} \\ \midrule
-Expected software defects (D/kLOC) & 18                      & 2                   \\ \midrule
+Expected software defects (D/\DIFdelbeginFL \DIFdelFL{KLOC}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{kLOC}\DIFaddendFL ) & 18                      & 2                   \\ \midrule
 Code inspection effort (men/month)    & 0.5                     & 0.033               \\ \midrule
 Costs with hardware\protect\footnotemark (U\$)             & 500,000                 & 5,000               \\ \midrule
 Connectivity dependency               & None                    & Very high           \\ \midrule
@@ -1066,7 +1166,7 @@ Estimative of availability            & Fair                    & High          
 The LR software size also affects the efforts required by MI type approval, especially code inspection activities.
 We evaluate such impact by using the studies of Ebert and Jones \cite{Ebert2009} about the quality of embedded software.
 Their work reports an average production rate of 60 FP (Function Points) by men/month in code inspection.
-Since the majority of the manufacturers implement their software in C language, we adopt the FP/kLOC conversion rate in the QSM Function Point Languages Table \footnote{http://www.qsm.com/resources/function-point-languages-table} of approximately 100 LOCs per FP.
+Since the majority of the manufacturers implement their software in C language, we adopt the FP/\DIFdelbegin \DIFdel{KLOC }\DIFdelend \DIFaddbegin \DIFadd{kLOC }\DIFaddend conversion rate in the QSM Function Point Languages Table \footnote{http://www.qsm.com/resources/function-point-languages-table} of approximately 100 LOCs per FP.
 Considering the LR software sizes estimated previously, we have an expected code inspection effort of  0.5 men/month in the traditional MI model against 0.033 men/month in the blockchain-based DMS.
 
 \subsection{Costs with hardware}
@@ -1077,7 +1177,7 @@ In our experiment, we consider the deploy of 1,000 meters, which correspond to t
 With the traditional MI model, that implies a direct cost of approximately U\$ 500,000 only with the Type-U hardware.
 In our implementation using Fabric, we succeeded in executing the LR software of the same number of MI in only three nodes of a Dell PowerEdge R410 cluster, which represents a cost with hardware that does not exceed U\$ 5,000.
 We cannot directly compare both scenarios because manufacturers avail the Type-U hardware deployed in the field to provide NLR features.
-However, we understand that the NLR software can also be provided by independent remote services.
+However, we understand that the NLR software \DIFdelbegin \DIFdel{also can }\DIFdelend \DIFaddbegin \DIFadd{can also }\DIFaddend be provided by independent remote services.
 Furthermore, the required hardware becomes less expensive once remote services run from data centers where the environment do not present the same inclement weather found in the field.
 Thus cost saving is evident in the adoption of a distributed and decentralized solution.
 
@@ -1089,10 +1189,10 @@ Such scenarios can require a more sophisticated MI hardware (e.g., additional me
 On the other hand, the traditional MI includes enough computational resources to manage information when there is no connectivity.
 They can even operate offline for several days without any problem related to information loss.
 
-Concerning the demand by connectivity, we can state that both solutions are similar.
-Although the traditional MI can send information in batch mode, the expected amount of information is practically the same as in the blockchain-based DMS.
-Furthermore, despite the extensive use of cryptography in a blockchain application, that does not represent a significant overhead regarding the amount of propagated information.
-Roughly speaking, the use of connectivity resources depends on the number of detected vehicles and not from the adopted model.
+Concerning the demand by connectivity, we can \DIFdelbegin \DIFdel{stat }\DIFdelend \DIFaddbegin \DIFadd{state }\DIFaddend that both solutions are similar.
+Although the traditional MI can send information in batch mode, the expected \DIFdelbegin \DIFdel{information amount }\DIFdelend \DIFaddbegin \DIFadd{amount of information }\DIFaddend is practically the same \DIFdelbegin \DIFdel{than }\DIFdelend \DIFaddbegin \DIFadd{as }\DIFaddend in the blockchain-based DMS.
+\DIFdelbegin \DIFdel{In turn}\DIFdelend \DIFaddbegin \DIFadd{Furthermore}\DIFaddend , despite the extensive use of cryptography in a blockchain application, that does not represent a \DIFdelbegin \DIFdel{significative }\DIFdelend \DIFaddbegin \DIFadd{significant }\DIFaddend overhead regarding the amount of propagated information.
+Roughly speaking, the use of connectivity resources depends on the number of detected vehicles and not from the adopted \DIFdelbegin \DIFdel{solution }\DIFdelend model.
 
 \subsection{Service reliability and availability}
 We evaluate the reliability and availability of the services provided by both speed meter models by comparing properties of a centralized and a distributed system.
@@ -1100,7 +1200,7 @@ In Reliability Theory, the MTBF (Mean Time Between Failures) and the MTTR (Mean 
 
 Traditional MI are centralized solutions and can easily become a single point of failure.
 Although the same happens with the simple MI hardware in the blockchain-based DMS, one knows that complex systems fail more often than simpler ones.
-So we can state that the $MTBF_h$ of the simple MI hardware used int the blockchain-based DMS is expected to be higher than the $MTBF_H$ of traditional MI.
+So we can \DIFdelbegin \DIFdel{stat }\DIFdelend \DIFaddbegin \DIFadd{state }\DIFaddend that the $MTBF_h$ of the simple MI hardware used int the blockchain-based DMS is expected to be higher than the $MTBF_H$ of traditional MI.
 Regarding the peers providing LR software execution, we claim that blockchains are based on distributed trust instead of a single point of trust.
 That means the blockchain fails only if multiple stakeholders collude against the system.
 Our implementation uses redundant peers (or replicas) with Byzantine consensus, which tolerates $F$ faults for $N = 3F + 1$ nodes \cite{Sousa2018}.
@@ -1110,10 +1210,10 @@ In turn, availability estimative depends primarily on the MTTR \cite{koren2010fa
 Consequently, if the organizations integrating the blockchain consensus can restore any faulty replica in an interval time  $T \leq MTBF_R *  F$, they can assure the service availability.
 
 At the moment we write this paper, we do not have enough quantitative information for estimating the MTBF and MTTR of each solution model.
-However, we can state two crucial aspects:
+However, we can \DIFdelbegin \DIFdel{stat }\DIFdelend \DIFaddbegin \DIFadd{state }\DIFaddend two crucial aspects:
 \begin{itemize}
  \item The blockchain-based DMS is expected to present a higher MTBF due to its simpler hardware in the field and because it does not have a single point of failure at the blockchain.
- \item The blockchain-based DMS is expected to present a better availability ratio due to its inherent fault tolerance.
+ \item The blockchain-based DMS is expected to present a better availability ratio due to its \DIFdelbegin \DIFdel{replicas that provide fault toleranceto the system}\DIFdelend \DIFaddbegin \DIFadd{inherent fault tolerance}\DIFaddend .
 \end{itemize}
 
 Considering this discussion, we estimate the traditional MI model as presenting a fair availability level, while the blockchain-based DMS is expected to offer high availability.
@@ -1124,13 +1224,13 @@ Some of them become very clear after we proceed with our practical experiment.
 We highlight the following main issues that should be addressed in future works:
 %are related to the amount of data expected in some measurement applications, privacy concerns and authentication of external information providers.
 
-\textbf{$\bullet$ The measurement Big Data:} MI usually manipulate a high amount of data. In a large-scale scenario (e.g., energy meters in a smart grid), MI can update their measurements faster, generating lots of transactions. 
-A network connecting millions of meters may generate a transaction load unfeasible to be processed by existing blockchains. 
+\textbf{$\bullet$ The measurement Big Data:} MI usually manipulate a high amount of data. In a \DIFdelbegin \DIFdel{large scale }\DIFdelend \DIFaddbegin \DIFadd{large-scale }\DIFaddend scenario (e.g., energy meters in a smart grid), MI can update their measurements faster, generating lots of transactions. 
+A network connecting millions of meters may generate a transaction load unfeasible to be processed by existing blockchains\DIFdelbegin \DIFdel{implementations}\DIFdelend . 
 In our tests with Fabric, for instance, we reach a max throughput of 380 tps, although Androulaki et al. \cite{Androulaki2018} points out a performance more than of 2,000 tps in their benchmark. 
 However, even such performance may not be enough to meet the demand for measurements on a smart grid, for instance.
 In such scenarios, solutions can require different workarounds and creative alternatives.
 We recall the use of endorsers, an idea that we explored with success in our experiment.
-Besides, one can try to use aggregated measurements for reducing transactions in a blockchain. 
+Besides, one can try to use aggregated measurements for reducing transactions in a blockchain\DIFdelbegin \DIFdel{implementation}\DIFdelend . 
 Also, one can try smarter MI for determining transactions on demand.
 
 %Another idea is to use \emph{transaction endorsers}, a concept introduced by HyperLedger Fabric \cite{Sousa2018}. Endorsers can execute complex measuring computing, leaving only validation tasks for regular peers.
@@ -1146,21 +1246,21 @@ One can also constrain access policies in such a manner that they satisfy privac
 
 \textbf{$\bullet$ Communication issues:} Although we consider MI as connected devices, communication can be a problem in applications demanding real-time decisions. 
 That is a restriction for any DMS over asynchronous networks. 
-Thus blockchain-based measuring is not appropriate for all MI applications. 
-Furthermore, attacks targeting communication (e.g., DDoS) represent an additional risk, although decentralized systems such as blockchains are more resilient to such attacks than conventional cloud architectures.
+Thus blockchain-based measuring is not \DIFdelbegin \DIFdel{proper }\DIFdelend \DIFaddbegin \DIFadd{appropriate }\DIFaddend for all MI applications. 
+Furthermore, attacks \DIFdelbegin \DIFdel{aiming }\DIFdelend \DIFaddbegin \DIFadd{targeting }\DIFaddend communication (e.g., DDoS) represent an additional risk, although decentralized systems such as blockchains are more resilient to such attacks than conventional cloud architectures.
 
 \textbf{$\bullet$ Oracles authentication:} External information providers are usually called \emph{oracles} in blockchain architectures. 
 In the described model, MI sensors can be seen as oracles since they are responsible for providing information from the physical world. 
 Even though sensors are small components which can be protected using physical seals, sensors authentication can be necessary to assure measuring reliability.
 
 \section{Conclusion}
-In this paper we discussed how blockchains can be used to support DMS.
+In this paper \DIFdelbegin \DIFdel{, we discussed a way }\DIFdelend \DIFaddbegin \DIFadd{we discussed how }\DIFaddend blockchains can be used to support DMS.
 Due to their intrinsic security properties, blockchains can improve MI metrological assurance by imposing restrictions against potential attacks while reducing technical efforts related to regulation and control activities.
 We demonstrated those properties by implementing a vehicle speed meter DMS using Hyperledger Fabric.
-Our results were consistent, and they support the feasibility of our proposal. 
+Our results were consistent, and they support \DIFdelbegin \DIFdel{our idea feasibility }\DIFdelend \DIFaddbegin \DIFadd{the feasibility of our proposal}\DIFaddend . 
 However, despite its promising application, blockchains pose several challenges that need to be faced. 
 The main ones are related to the amount of data, privacy, communication and oracles authentication. 
-Future work shall include a complete risk analysis of our blockchain-based model to develop new strategies for addressing the challenges discussed here.
+Future \DIFdelbegin \DIFdel{works }\DIFdelend \DIFaddbegin \DIFadd{work }\DIFaddend shall include a complete risk analysis of our blockchain-based model \DIFdelbegin \DIFdel{, as so as }\DIFdelend \DIFaddbegin \DIFadd{to develop }\DIFaddend new strategies for addressing the challenges discussed \DIFdelbegin \DIFdel{at the end}\DIFdelend \DIFaddbegin \DIFadd{here}\DIFaddend .
 
 % conference papers do not normally have an appendix
 
