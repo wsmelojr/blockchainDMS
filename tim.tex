@@ -635,15 +635,15 @@ Such aspect also impacts LR software type approval efforts, saving time and cost
 \centering
 \caption{Traditional MI, cloud model and blockchain model security analisys summary.}
 \label{t:sec_analysis}
-\begin{tabularx}{1\textwidth}{|@{}c|l|X|X@{}|}
-\toprule
-                                  & \multicolumn{1}{c|}{\textbf{Traditional MI}} & \multicolumn{1}{c|}{\textbf{Cloud Model}}                                                                             & \multicolumn{1}{c|}{\textbf{Blockchain Model}}                                                               \\ \midrule
-\multicolumn{1}{|c|}{\textbf{R1}} & Required                                     & Required (tamper proofing).                                                                                           & Required (tamper proofing).                                                                                  \\ \midrule
-\multicolumn{1}{|c|}{\textbf{R2}} & Required                                     & Required only for LR software in the cloud.                                                                           & Unnecessary, LR smart contracts have integrity enforced due to blockchain properties.                        \\ \midrule
-\multicolumn{1}{|c|}{\textbf{R3}} & Required                                     & Required only for LR software in the cloud.                                                                           & Unnecessary, LR smart contracts are signed by notified bodies and checked by blockchain peers on deployment. \\ \midrule
-\textbf{A1}                       & Necessary                                    & Necessary, but the evaluation of LR software in the cloud is expected to be easier than MI embedded software.         & Necessary, but the evaluation of LR smart contracts is easier than the other models.                         \\ \midrule
-\textbf{A2}                       & Necessary                                    & Necessary, but LR software use cases are reduced and its V\&V can be performed without the need of field tests.               & Necessary, but LR software use cases are reduced and its V\&V can be performed without the need of field tests.      \\ \midrule
-\textbf{A3}                       & Necessary                                    & Partially necessary, since periodical inspections take place only in data centers where cloud servers are hosted. & Unnecessary, LR smart contracts have integrity enforced due to blockchain properties.                        \\ \bottomrule
+\begin{tabularx}{1\textwidth}{|c|l|X|X|}
+\hline
+                                  & \multicolumn{1}{c|}{\textbf{Trad. MI}} & \multicolumn{1}{c|}{\textbf{Cloud Model}}                                                                             & \multicolumn{1}{c|}{\textbf{Blockchain Model}}                                                               \\ \hline
+\multicolumn{1}{|c|}{\textbf{R1}} & Required                                     & Required (tamper proofing).                                                                                           & Required (tamper proofing).                                                                                  \\ \hline
+\multicolumn{1}{|c|}{\textbf{R2}} & Required                                     & Required only for LR software in the cloud.                                                                           & Unnecessary, LR smart contracts have integrity enforced due to blockchain properties.                        \\ \hline
+\multicolumn{1}{|c|}{\textbf{R3}} & Required                                     & Required only for LR software in the cloud.                                                                           & Unnecessary, LR smart contracts are signed by notified bodies and checked by blockchain peers on deployment. \\ \hline
+\textbf{A1}                       & Necessary                                    & Necessary, but the evaluation of LR software in the cloud is expected to be easier than MI embedded software.         & Necessary, but the evaluation of LR smart contracts is easier than the other models.                         \\ \hline
+\textbf{A2}                       & Necessary                                    & Necessary, but LR software use cases are reduced and its V\&V can be performed without the need of field tests.               & Necessary, but LR software use cases are reduced and its V\&V can be performed without the need of field tests.      \\ \hline
+\textbf{A3}                       & Necessary                                    & Partially necessary, since periodical inspections take place only in data centers where cloud servers are hosted. & Unnecessary, LR smart contracts have integrity enforced due to blockchain properties.                        \\ \hline
 \end{tabularx}
 \end{table*}
 
@@ -1045,22 +1045,39 @@ We confirm that in our speed meter DMS implementation.
 Its LR software consists of a Go language chaincode that requires no more than 200 LOCs.
 Such size points out an estimate of no more than two remaining software defects, which also reduces the chances of potential vulnerabilities.
 
+% \begin{table}[t!]
+% \centering
+% \caption{Advantages and drawbacks of the Traditional MI and our Fabric DMS implementation.}
+% \label{t:quantitative}
+% \begin{tabularx}{0.47\textwidth}{|@{}l|c|c@{}|}
+% \toprule
+% \textbf{Evaluated aspect}             & \textbf{Traditional MI} & \textbf{Fabric DMS} \\ \midrule
+% Expected software defects (D/kLOC) & 18                      & 2                   \\ \midrule
+% Code inspection effort (men/month)    & 0.5                     & 0.033               \\ \midrule
+% Costs with hardware\protect\footnotemark (U\$)             & 500,000                 & 5,000               \\ \midrule
+% Connectivity dependency               & None                    & Very high           \\ \midrule
+% Estimative of availability            & Fair                    & High              \\ \bottomrule
+% \end{tabularx}
+% \end{table}
+% %\addtocounter{footnote}{-1}
+% \footnotetext{The analysis do not include the hardware required for NLR software.}
+
 \begin{table}[t!]
 \centering
 \caption{Advantages and drawbacks of the Traditional MI and our Fabric DMS implementation.}
 \label{t:quantitative}
-\begin{tabularx}{0.47\textwidth}{|@{}l|c|c@{}|}
-\toprule
-\textbf{Evaluated aspect}             & \textbf{Traditional MI} & \textbf{Fabric DMS} \\ \midrule
-Expected software defects (D/kLOC) & 18                      & 2                   \\ \midrule
-Code inspection effort (men/month)    & 0.5                     & 0.033               \\ \midrule
-Costs with hardware\protect\footnotemark (U\$)             & 500,000                 & 5,000               \\ \midrule
-Connectivity dependency               & None                    & Very high           \\ \midrule
-Estimative of availability            & Fair                    & High              \\ \bottomrule
+\begin{tabularx}{0.48\textwidth}{|l|c|c|}
+\hline
+\textbf{Evaluated aspect}             & \textbf{Trad. MI} & \textbf{Fabric DMS} \\ \hline
+Expected LR software defects (D/kLOC) & 18                      & 2                   \\ \hline
+Code inspection effort (men/month)    & 0.5                     & 0.033               \\ \hline
+Costs with hardware\protect\footnotemark (U\$)             & 500,000                 & 5,000               \\ \hline
+Connectivity dependency               & None                    & Very high           \\ \hline
+Estimative of availability            & Fair                    & Very high           \\ \hline
 \end{tabularx}
 \end{table}
-%\addtocounter{footnote}{-1}
 \footnotetext{The analysis do not include the hardware required for NLR software.}
+
 
 \subsection{Code inspection efforts}
 The LR software size also affects the efforts required by MI type approval, especially code inspection activities.
@@ -1313,15 +1330,15 @@ This work was partially sponsored by the by the Coordination for the Improvement
 % that's all folks
 
 \begin{IEEEbiographynophoto}{Wilson S. Melo Jr.}
-is a Researcher at the National Institute of Metrology, Quality, and Technology (Inmetro), Rio de Janeiro, Brazil.
-He holds a PhD in Computer Sciences from the Federal University of Rio de Janeiro (Brazil).
-He has more than 20 years of experience with software development projects.
-His main expertise regards software for industrial applications, especially solutions related to measurement, patterns recognizing and cybersecurity.
+is a Researcher at the Brazilian National Institute of Metrology, Quality, and Technology (Inmetro).
+He holds a Ph.D. in Computer Sciences from the Federal University of Rio de Janeiro.
+He has more than 20 years of experience with software development and testing projects.
+His main expertise regards software for industrial applications, especially solutions related to measurement, control, patterns recognizing, and cybersecurity.
 More information about him can be found at https://www.researchgate.net/profile/Wilson\_Melo\_Junior.
 \end{IEEEbiographynophoto}
 
 \begin{IEEEbiographynophoto}{Alysson Bessani}
- is an Associate Professor of the Faculty of Sciences of the University of Lisboa, Portugal, and a member of LASIGE research unit. He holds a PhD in Electrical Engineering from UFSC (Brazil) and was a visiting professor in Carnegie Mellow University (2010) and a visiting researcher in Microsoft Research Cambridge (2014). He is the co-author of more than 100 peer-reviewed publications on dependability, security, Byzantine fault tolerance, and cloud. More information about him can be found at http://www.di.fc.ul.pt/~bessani.
+ is an Associate Professor of the Faculty of Sciences of the University of Lisboa, Portugal, and a member of LASIGE research unit. He holds a Ph.D. in Electrical Engineering from UFSC (Brazil) and was a visiting professor in Carnegie Mellow University (2010) and a visiting researcher in Microsoft Research Cambridge (2014). He is the co-author of more than 100 peer-reviewed publications on dependability, security, Byzantine fault tolerance, and cloud. More information about him can be found at http://www.di.fc.ul.pt/~bessani.
 \end{IEEEbiographynophoto}
 
 \begin{IEEEbiographynophoto}{Nuno Neves}
@@ -1333,7 +1350,10 @@ I am nobody.
 \end{IEEEbiographynophoto}
 
 \begin{IEEEbiographynophoto}{Luiz F. R. C. Carmo}
-I am nobody.
+received a Ph.D. degree on Computer Science in 1994, from the LAAS/CNRS, Toulouse III – France.
+Presently, he is a Senior Specialist in Computer Sciences of the Brazilian Institute of Metrology, Technology and Quality (Inmetro), General Coordinator of the Education Center. 
+He is an active lecturer of both the Doctoral programs in Computer Sciences of UFRJ and in Metrology of Inmetro.
+His research interests include information security, and embedded systems.
 \end{IEEEbiographynophoto}
 
 \end{document}
